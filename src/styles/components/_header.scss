@@ -1,0 +1,19 @@
+.header {
+  background: $dark-blue;
+  color: white;
+}
+
+.header__title {
+  color: white;
+  text-decoration: none;
+  h1 {
+    margin: 0;
+  }
+}
+
+.header__content {
+  align-items: center;
+  padding: $s-size 0;
+  display: flex;
+  justify-content: space-between; // distribute leftover space between title and button
+}

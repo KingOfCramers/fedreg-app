@@ -1,0 +1,11 @@
+.show-for-mobile {
+  @media (min-width: $desktop-breakpoint) { // display: none will only apply up to a min-width of....
+    display: none
+  }
+}
+
+.show-for-desktop {
+  @media (max-width: $desktop-breakpoint - .01rem) { // display: none will only apply up to a max-width of....
+    display: none
+  }
+}

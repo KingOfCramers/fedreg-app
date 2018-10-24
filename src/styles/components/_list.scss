@@ -1,0 +1,65 @@
+.list-header {
+  background: $off-white;
+  border: 1px solid darken($off-white, 10%);
+  color: $medium-grey;
+  display: flex;
+  justify-content: space-between;
+  padding: $s-size $m-size;
+}
+
+.list-body {
+  margin-bottom: $m-size;
+  @media (min-width: $desktop-breakpoint) {
+    margin-bottom: $l-size;
+  }
+}
+
+.list-item {
+  border: 1px solid darken($off-white, 10%);
+  border-top: none;
+  color: $dark-grey;
+  display: flex;
+  flex-direction: column;
+  padding: $s-size;
+  text-decoration: none;
+  transition: background .2s ease;
+  &:hover { // equivalent to .list-item:hover
+    background: $off-white;
+  }
+
+  @media (min-width: $desktop-breakpoint){ // when min-width is desktop-breakpoint or higher
+    flex-direction: row;
+    justify-content: space-between;
+    padding: $m-size;
+    align-items: center;
+  }
+}
+
+.list-item--empty {
+  @extend .list-item;
+  align-items: center;
+  justify-content: center;
+  color: $medium-grey;
+  padding: $m-size;
+  &:hover {
+    background: none;
+  }
+}
+
+.list-item__title {
+  margin: 0;
+  word-break: break-all;
+}
+
+.list-item__sub-title {
+  color: $medium-grey;
+  font-size: $small-font-size;
+}
+
+.list-item__data {
+  margin: $s-size 0 0 0; //only margin on top.
+  @media (min-width: $desktop-breakpoint) {
+    margin: 0;
+    padding-left: $s-size;
+  }
+}
