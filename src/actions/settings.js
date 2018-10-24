@@ -28,7 +28,7 @@ export const removeSetting = ({ id } = {}) => ({
 export const startRemoveSetting = ({ id } = {}) => {
  return (dispatch, getState) => {
    const uid = getState().auth.uid;
-   return database.ref(`users/${uid}/settings/${id}`).remove()
+   return database.ref(`${uid}/settings/${id}`).remove()
      .then(() => {
        dispatch(removeSetting({ id }));
      });
