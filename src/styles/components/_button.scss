@@ -8,6 +8,11 @@
   display: inline-block; // Takes into effect top and bottom margin and padding
   text-decoration: none;
   line-height: 1;
+
+  @media (max-width: $desktop-breakpoint) {
+    width: 100px;
+    font-size: $small-font-size;
+  }
 }
 
 .button--link {
@@ -18,3 +23,4 @@
   @extend .button;
   background: $dark-gold;
 }
+
