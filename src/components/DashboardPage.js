@@ -1,20 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import allDepartments from "../resources/allDepartments.js";
 import Tracker from "./Tracker";
 import { connect } from "react-redux";
+import Selector from "./Selector";
 
-export const DashboardPage = (props) => (
-  <div>
-    <input type="text"/>
-    <div>
-      {props.settings.map((data) => <Tracker key={data.id} {...data}/>)}
-    </div>
-  </div>
-);
+export class DashboardPage extends React.Component {
+
+  onSubmit = (e) => {
+    this.props.startAddSetting("BLOOP")
+  }
+
+  render(){
+    return (
+      <div>
+        <Selector />
+        <div>
+          {this.props.settings.map((data) => <Tracker key={data.department} {...data} /> )}
+        </div>
+      </div>
+    )
+  }
+}
 
 const mapStateToProps = (state,props) => ({
   settings: state.settings
 });
+
 
 export default connect(mapStateToProps, null)(DashboardPage)

@@ -1,4 +1,6 @@
+// import allDepartments from "../resources/allDepartments";
 const settingsReducerDefaultState = []; // Empty array...
+
 const settingsReducer = (state = settingsReducerDefaultState, action) => {
   switch(action.type) {
     case "SET_SETTINGS" :

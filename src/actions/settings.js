@@ -11,7 +11,7 @@ export const startAddSetting = ({ department = "" } = {}) => {
    const setting = { department };
    const uid = getState().auth.uid; // Access to the user id!
 
-   return database.ref(`${uid}/settings`).push(setting).then((ref) => { // Returning for testing purposes...
+   return database.ref(`${uid}/`).push(setting).then((ref) => { // Returning for testing purposes...
       dispatch(addSetting({
        id: ref.key, // from firebase... This is the id of the actual document!!! We access it later inside startEditExpense
        ...setting
@@ -28,7 +28,7 @@ export const removeSetting = ({ id } = {}) => ({
 export const startRemoveSetting = ({ id } = {}) => {
  return (dispatch, getState) => {
    const uid = getState().auth.uid;
-   return database.ref(`${uid}/settings/${id}`).remove()
+   return database.ref(`${uid}/${id}`).remove()
      .then(() => {
        dispatch(removeSetting({ id }));
      });
@@ -39,7 +39,7 @@ export const startSetSettings = () => {
   return (dispatch, getState) => {
     const uid = getState().auth.uid;
 
-    return database.ref(`${uid}/settings`).once("value")
+    return database.ref(`${uid}/`).once("value")
       .then((snapshot) => {
         let settings = [];
         snapshot.forEach((childSnapshot) => {

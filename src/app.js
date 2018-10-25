@@ -43,7 +43,7 @@ firebase.auth().onAuthStateChanged((user) => {
   if(user){
     store.dispatch(login(user.uid)); // Store uid prop inside Redux state.
      store.dispatch(startSetSettings()).then(() => {
-      //store.dispatch(startAddSetting({ department: "OF GOOFY WALKS" }))
+      // store.dispatch(startAddSetting({ department: "OF SILLY WALKS", enabled: true }))
       // store.dispatch(startRemoveSetting({ id: "-LPbF0qB_gb_nya0O1-o"}));
       renderApp(); // If logged in, render app w/ user data.
       if (history.location.pathname === "/") { // On login page, to to dashboard.

@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { startRemoveSetting } from "../actions/settings";
+import { startRemoveSetting, startAddSetting } from "../actions/settings";
 
 export class Tracker extends React.Component {
 
@@ -17,6 +17,7 @@ export class Tracker extends React.Component {
     )
   };
 };
+
 const mapDispatchToProps = (dispatch,props) => ({
   startRemoveSetting: (id) => dispatch(startRemoveSetting(id))
 })
