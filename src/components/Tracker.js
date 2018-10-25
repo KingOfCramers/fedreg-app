@@ -10,9 +10,9 @@ export class Tracker extends React.Component {
 
   render(){
     return (
-      <div>
+      <div className="list-item">
         <p>{this.props.department}</p>
-        <button onClick={this.onRemove}>Remove</button>
+        <button onClick={this.onRemove} className="button">Remove</button>
       </div>
     )
   };

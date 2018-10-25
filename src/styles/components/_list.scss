@@ -23,9 +23,9 @@
   padding: $s-size;
   text-decoration: none;
   transition: background .2s ease;
-  &:hover { // equivalent to .list-item:hover
+/*   &:hover { // equivalent to .list-item:hover
     background: $off-white;
-  }
+  } */
 
   @media (min-width: $desktop-breakpoint){ // when min-width is desktop-breakpoint or higher
     flex-direction: row;
@@ -34,6 +34,13 @@
     align-items: center;
   }
 }
+
+
+.list-item:first-of-type {
+  margin-top: $s-size;
+  border-top: 1px solid darken($off-white, 10%);
+}
+
 
 .list-item--empty {
   @extend .list-item;
