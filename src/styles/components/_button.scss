@@ -13,8 +13,8 @@
   }
 
   @media (max-width: $desktop-breakpoint) {
-    width: 100px;
     font-size: $small-font-size;
+    margin-bottom: 4px;
   }
 }
 
@@ -24,6 +24,20 @@
 
 .button--link {
   background: none;
+  color: white;
+  border: none;
+  padding: $s-size;
+  font-weight: 300;
+  &:hover {
+    background: darken($dark-gold, 5%);
+  }
+
+}
+
+.button--link__secondary {
+  @extend .button;
+  background: $dark-gold;
+  color: white;
 }
 
 .button--secondary {
