@@ -6,10 +6,6 @@ import Selector from "./Selector";
 
 export class DashboardPage extends React.Component {
 
-  onSubmit = (e) => {
-    this.props.startAddSetting("BLOOP")
-  }
-
   render(){
     return (
       <div className="content-container">

@@ -1,18 +1,25 @@
 .button {
-  background: $blue;
+  background: darken($blue, 10%);
   border: none;
   color: white;
   padding: $s-size;
   font-weight: 300;
-  font-size: $large-font-size;
+  font-size: $medium-font-size;
   display: inline-block; // Takes into effect top and bottom margin and padding
   text-decoration: none;
   line-height: 1;
+  &:hover {
+    background: darken($blue, 15%);
+  }
 
   @media (max-width: $desktop-breakpoint) {
     width: 100px;
     font-size: $small-font-size;
   }
+}
+
+.button:focus {
+  outline: none;
 }
 
 .button--link {
@@ -21,6 +28,10 @@
 
 .button--secondary {
   @extend .button;
-  background: $dark-gold;
+  background: $blue;
+
+  &:hover {
+    background: darken($blue, 5%);
+  }
 }
 

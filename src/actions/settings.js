@@ -6,9 +6,9 @@ export const addSetting = (setting) => ({
   setting
 });
 
-export const startAddSetting = ({ department = "" } = {}) => {
+export const startAddSetting = ({ department = "", description = "", url="", image="" } = {}) => {
  return (dispatch, getState) => { // Thunk returns an object dispatch and getState!
-   const setting = { department };
+   const setting = { department, description, url, image };
    const uid = getState().auth.uid; // Access to the user id!
 
    return database.ref(`${uid}/`).push(setting).then((ref) => { // Returning for testing purposes...
