@@ -16,7 +16,18 @@ const settingsReducer = (state = settingsReducerDefaultState, action) => {
         if(setting.id === action.id){
           return {
             ...setting,
-            toggleSpecial: setting.toggleSpecial
+            special: setting.special
+          }
+        } else {
+          return setting;
+        }
+      });
+    case "TOGGLE_RULES" :
+      return state.map((setting) => {
+        if(setting.id === action.id){
+          return {
+            ...setting,
+            rules: setting.rules
           }
         } else {
           return setting;

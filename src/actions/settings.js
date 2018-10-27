@@ -8,7 +8,7 @@ export const addSetting = (setting) => ({
 
 export const startAddSetting = ({ department = "", description = "", url= "" } = {}) => {
  return (dispatch, getState) => { // Thunk returns an object dispatch and getState!
-   const setting = { department, description, url, toggleSpecial: true };
+   const setting = { department, description, url, special: true, rules: false };
    const uid = getState().auth.uid; // Access to the user id!
 
    return database.ref(`${uid}/`).push(setting).then((ref) => { // Returning for testing purposes...
@@ -58,18 +58,49 @@ export const setSettings = (settings) => ({
   settings
 });
 
-export const startToggleSpecial = ({ toggleSpecial, id }) => {
+export const startToggleSpecial = ({ special, id }) => {
   return (dispatch, getState) => {
     const uid = getState().auth.uid;
     return database.ref(`${uid}/${id}`)
       .update({
-        toggleSpecial
+        special
       })
-      .then(() => dispatch(setToggleState(toggleSpecial)));
+      .then(() => dispatch(toggleSpecial(special)));
     };
 };
 
-export const setToggleState = (toggleSpecial) => ({
+export const toggleSpecial = (special) => ({
   type: "TOGGLE_SPECIAL",
-  toggleSpecial
+  special
 });
+
+export const startToggleRules = ({ rules, id }) => {
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`${uid}/${id}`)
+      .update({
+        rules
+      })
+      .then(() => dispatch(toggleRules(rules)));
+    };
+};
+
+export const toggleRules = (rules) => ({
+  type: "TOGGLE_RULES",
+  rules
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

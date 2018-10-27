@@ -17,13 +17,13 @@
 .list-item {
   border: 1px solid darken($off-white, 10%);
   border-top: none;
-  border-bottom: none;
   color: $dark-grey;
   display: flex;
   flex-direction: column;
   padding: $s-size;
   text-decoration: none;
   transition: background .2s ease;
+
 
 /*   &:hover { // equivalent to .list-item:hover
     background: $off-white;
@@ -43,7 +43,6 @@
 }
 
 .list-item a {
-  text-decoration: none;
   color: black;
   &:hover {
     color: $blue;
@@ -73,17 +72,25 @@
   padding-bottom: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
+  border-top: none;
+  border-bottom: none;
+  background: $off-white;
 }
+
+.list-item__settings:first-of-type {
+  margin-top: 0px;
+  border-top: none;
+}
+
+.list-item__settings:last-of-type {
+  border-bottom: 1px solid darken($off-white, 10%);
+}
+
 
 .list-items__settings-toggle {
   padding: none $s-size;
 }
 
-.list-item__settings:first-of-type {
-  margin-top: 0;
-  border-top: none;
-  border-bottom: none;
-}
 
 .list-item__settings-description {
   font-size: $small-font-size;

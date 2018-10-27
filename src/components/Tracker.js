@@ -1,12 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
-import { startRemoveSetting, startAddSetting, startToggleSpecial } from "../actions/settings";
+import { startRemoveSetting, startAddSetting, startToggleSpecial, startToggleRules } from "../actions/settings";
 import ToggleButton from "react-toggle-button";
 
 export class Tracker extends React.Component {
   state = {
     info: false,
-    toggle: this.props.toggleSpecial
+    toggle: this.props.special,
+    rules: this.props.rules
   }
 
   onRemove = () => {
@@ -18,7 +19,11 @@ export class Tracker extends React.Component {
   }
 
   onSpecial = (bool) => {
-    this.props.startToggleSpecial({ toggleSpecial: bool, id: this.props.id })
+    this.props.startToggleSpecial({ special: bool, id: this.props.id })
+  }
+
+  onRules = (bool) => {
+    this.props.startToggleRules({ rules: bool, id: this.props.id })
   }
 
   render(){
@@ -41,7 +46,20 @@ export class Tracker extends React.Component {
                     this.setState((prevState) => ({ toggle: !value }));
                     this.onSpecial(!value);
                 }}/>
-                <p className="list-item__settings-description">Enable special collection to recieve real-time updates whenever a "special filing" is made for {this.props.department}. If this feature is disabled you will still recieve the files at 5:00 p.m. EST.</p>
+                <p className="list-item__settings-description">Enable special collection to recieve real-time updates whenever a "special filing" is made for {this.props.department}. If this feature is disabled you will still recieve the files at 5:00 p.m.</p>
+              </div>
+            </div>
+            <div className="list-item__settings">
+              <div className="list-item__settings-toggle">
+                <p className="list-item__settings-title">Rules Only</p>
+                <ToggleButton
+                  className="list-item__settings-button"
+                  value={this.state.rules}
+                  onToggle={(value) => {
+                    this.setState((prevState) => ({ rules: !value }));
+                    this.onRules(!value);
+                }}/>
+                <p className="list-item__settings-description">Enable special collection to recieve real-time updates whenever a "special filing" is made for {this.props.department}. If this feature is disabled you will still recieve the files at 5:00 p.m.</p>
               </div>
             </div>
             <div className="list-item__settings">
@@ -56,7 +74,8 @@ export class Tracker extends React.Component {
 
 const mapDispatchToProps = (dispatch,props) => ({
   startRemoveSetting: (id) => dispatch(startRemoveSetting(id)),
-  startToggleSpecial: ({ toggleSpecial, id }) => dispatch(startToggleSpecial({ toggleSpecial, id }))
+  startToggleSpecial: ({ special, id }) => dispatch(startToggleSpecial({ special, id })),
+  startToggleRules: ({ rules, id }) => dispatch(startToggleRules({ rules, id }))
 })
 
 export default connect(null, mapDispatchToProps)(Tracker);
