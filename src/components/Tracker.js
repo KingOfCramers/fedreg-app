@@ -41,7 +41,7 @@ export class Tracker extends React.Component {
                     this.setState((prevState) => ({ toggle: !value }));
                     this.onSpecial(!value);
                 }}/>
-                <p className="list-item__settings-description">Enable special collection to recieve email notifications for {this.props.department} whenever a "special filing" is made.</p>
+                <p className="list-item__settings-description">Enable special collection to recieve real-time updates whenever a "special filing" is made for {this.props.department}. If this feature is disabled you will still recieve the files at 5:00 p.m. EST.</p>
               </div>
             </div>
             <div className="list-item__settings">
