@@ -11,6 +11,17 @@ const settingsReducer = (state = settingsReducerDefaultState, action) => {
       return state.filter((setting) => {
         return setting.id !== action.id
       });
+    case "TOGGLE_SPECIAL" :
+      return state.map((setting) => {
+        if(setting.id === action.id){
+          return {
+            ...setting,
+            toggleSpecial: setting.toggleSpecial
+          }
+        } else {
+          return setting;
+        }
+      });
     default:
       return state;
   };

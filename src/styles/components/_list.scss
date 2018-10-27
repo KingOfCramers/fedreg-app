@@ -17,6 +17,7 @@
 .list-item {
   border: 1px solid darken($off-white, 10%);
   border-top: none;
+  border-bottom: none;
   color: $dark-grey;
   display: flex;
   flex-direction: column;
@@ -35,7 +36,6 @@
     align-items: center;
   }
 }
-
 
 .list-item:first-of-type {
   margin-top: $s-size;
@@ -66,6 +66,26 @@
   flex: 1;
 }
 
-.list-item__description {
+
+.list-item__settings {
+  @extend .list-item;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.list-items__settings-toggle {
+  padding: none $s-size;
+}
+
+.list-item__settings:first-of-type {
+  margin-top: 0;
+  border-top: none;
+  border-bottom: none;
+}
+
+.list-item__settings-description {
   font-size: $small-font-size;
 }
+

@@ -6,9 +6,9 @@ export const addSetting = (setting) => ({
   setting
 });
 
-export const startAddSetting = ({ department = "", description = "", url="", image="" } = {}) => {
+export const startAddSetting = ({ department = "", description = "", url= "" } = {}) => {
  return (dispatch, getState) => { // Thunk returns an object dispatch and getState!
-   const setting = { department, description, url, image };
+   const setting = { department, description, url, toggleSpecial: true };
    const uid = getState().auth.uid; // Access to the user id!
 
    return database.ref(`${uid}/`).push(setting).then((ref) => { // Returning for testing purposes...
@@ -56,4 +56,20 @@ export const startSetSettings = () => {
 export const setSettings = (settings) => ({
   type: "SET_SETTINGS",
   settings
+});
+
+export const startToggleSpecial = ({ toggleSpecial, id }) => {
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`${uid}/${id}`)
+      .update({
+        toggleSpecial
+      })
+      .then(() => dispatch(setToggleState(toggleSpecial)));
+    };
+};
+
+export const setToggleState = (toggleSpecial) => ({
+  type: "TOGGLE_SPECIAL",
+  toggleSpecial
 });

@@ -11,7 +11,10 @@ export class DashboardPage extends React.Component {
       <div className="content-container">
         <Selector className="selector"/>
         <div>
-          {this.props.settings.map((data) => <Tracker key={data.department} {...data} /> )}
+          {this.props.settings.map((data) => {
+            console.log(data);
+            return <Tracker key={data.department} {...data} />
+          })}
         </div>
       </div>
     )
