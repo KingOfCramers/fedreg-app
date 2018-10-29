@@ -53,18 +53,15 @@
   flex: 5;
 }
 
-.list-item__info {
-  flex: 1;
-  margin-right: $s-size;
-  &:hover {
-    opacity: .5;
-  }
+.showing {
+  max-height: 9000px;
+  transition: max-height .2s ease-in;
 }
-
-.list-item__remove {
-  flex: 1;
+.collapsed {
+  max-height: 0;
+  transition: max-height .2s ease-out;
+  overflow: hidden;
 }
-
 
 .list-item__settings {
   @extend .list-item;
