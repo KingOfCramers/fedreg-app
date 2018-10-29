@@ -29,11 +29,11 @@ export class Tracker extends React.Component {
   render(){
     return (
       <div>
-      <div className="list-item">
+        <div className={`list-item ${this.state.info ? "selected" : "unselected"}`}>
         <p className="list-item__title"><a href={this.props.url}>{this.props.department}</a></p>
         <button className="list-item__info" onClick={this.onShow} className="button--secondary">{this.state.info ? "Hide" : "Info"}</button>
         <button className="list-item__remove" onClick={this.onRemove} className="button">Remove</button>
-      </div>
+        </div>
       <div className={this.state.info ? "showing" : "collapsed" }>
         <div className="list-item__settings">
           <div className="list-item__settings-toggle">

@@ -11,12 +11,14 @@ export const startAddSetting = ({ department = "", description = "", url= "" } =
    const setting = { department, description, url, special: true, rules: false };
    const uid = getState().auth.uid; // Access to the user id!
 
-   return database.ref(`${uid}/`).push(setting).then((ref) => { // Returning for testing purposes...
-      dispatch(addSetting({
-       id: ref.key, // from firebase... This is the id of the actual document!!! We access it later inside startEditExpense
-       ...setting
-      }));
-   });
+   if(!!department){
+    return database.ref(`${uid}/`).push(setting).then((ref) => { // Returning for testing purposes...
+       dispatch(addSetting({
+        id: ref.key, // from firebase... This is the id of the actual document!!! We access it later inside startEditExpense
+        ...setting
+       }));
+    });
+   }
  };
 };
 
@@ -90,7 +92,17 @@ export const toggleRules = (rules) => ({
   rules
 });
 
+export const clearSettings = () => ({
+  type: "CLEAR_SETTINGS"
+});
 
+export const startClearSettings = () => {
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`${uid}`).remove()
+      .then(() => dispatch(clearSettings()));
+  }
+}
 
 
 

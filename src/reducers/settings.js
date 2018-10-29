@@ -33,6 +33,8 @@ const settingsReducer = (state = settingsReducerDefaultState, action) => {
           return setting;
         }
       });
+    case "CLEAR_SETTINGS":
+      return settingsReducerDefaultState;
     default:
       return state;
   };

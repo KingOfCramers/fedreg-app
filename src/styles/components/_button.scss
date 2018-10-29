@@ -49,3 +49,13 @@
   }
 }
 
+.button--clear {
+  @extend .button;
+  margin-top: $s-size;
+  margin-bottom: $s-size;
+
+  background: $red;
+  &:hover {
+    background: darken($red, 5%);
+  }
+}
