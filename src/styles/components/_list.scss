@@ -67,11 +67,12 @@
 
 .showing {
   max-height: 9000px;
-  transition: max-height .5s ease-in;
+  opacity: 0%;
+  transition: max-height .4s ease-in;
 }
 .collapsed {
   max-height: 0;
-  transition: max-height .1s ease-out;
+  transition: max-height .2s;
   overflow: hidden;
   padding: 0px;
 }
