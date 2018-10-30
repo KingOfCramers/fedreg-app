@@ -68,13 +68,13 @@
 .showing {
   max-height: 9000px;
   opacity: 1;
-  transition: max-height .4s, opacity .2s;
+  transition: max-height .8s, opacity .8s;
 }
 .collapsed {
   opacity: 0;
-  max-height: 0;
+  max-height: 0px;
+  transition: max-height .2s ease, opacity .2s;
   overflow: hidden;
-  padding: 0px;
 }
 
 .list-item__settings {
