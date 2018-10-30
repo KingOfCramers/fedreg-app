@@ -1,15 +1,15 @@
 .button {
-  background: darken($blue, 10%);
+  background: darken($blue, 20%);
   border: none;
   color: white;
   padding: $s-size;
   font-weight: 300;
-  font-size: $medium-font-size;
+  font-size: $small-font-size;
   display: inline-block; // Takes into effect top and bottom margin and padding
   text-decoration: none;
   line-height: 1;
   &:hover {
-    background: darken($blue, 15%);
+    background: darken($blue, 25%);
   }
 
   @media (max-width: $desktop-breakpoint) {
@@ -46,6 +46,16 @@
 
   &:hover {
     background: darken($blue, 5%);
+  }
+}
+
+
+.button--third {
+  @extend .button;
+  background: darken($blue, 10%);
+
+  &:hover {
+    background: darken($blue, 15%);
   }
 }
 

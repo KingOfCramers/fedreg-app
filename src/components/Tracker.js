@@ -6,15 +6,20 @@ import ToggleButton from "react-toggle-button";
 export class Tracker extends React.Component {
   state = {
     info: false,
-    toggle: this.props.special,
-    rules: this.props.rules
+    special: this.props.special,
+    rules: this.props.rules,
+    description: false
+  }
+
+  onShowDescription = () => {
+    this.setState((prevState) => ({ description: !prevState.description }));
   }
 
   onRemove = () => {
     this.props.startRemoveSetting({id: this.props.id})
   }
 
-  onShow = () => {
+  onShowSettings = () => {
     this.setState((prevState) => ({ info: !prevState.info }));
   }
 
@@ -31,8 +36,11 @@ export class Tracker extends React.Component {
       <div>
         <div className={`list-item ${this.state.info ? "selected" : "unselected"}`}>
         <p className="list-item__title"><a href={this.props.url}>{this.props.department}</a></p>
-        <button className="list-item__info" onClick={this.onShow} className="button--secondary">{this.state.info ? "Hide" : "Info"}</button>
-        <button className="list-item__remove" onClick={this.onRemove} className="button">Remove</button>
+        <div className="list-item__button-container">
+          <button className="list-item__info" onClick={this.onShowDescription} className="button--secondary">Info</button>
+          <button className="list-item__info" onClick={this.onShowSettings} className="button--third">{this.state.info ? "Hide" : "Settings"}</button>
+          <button className="list-item__remove" onClick={this.onRemove} className="button">Delete</button>
+        </div>
         </div>
       <div className={this.state.info ? "showing" : "collapsed" }>
         <div className="list-item__settings">
@@ -40,9 +48,9 @@ export class Tracker extends React.Component {
             <p className="list-item__settings-title">Special Collection</p>
             <ToggleButton
               className="list-item__settings-button"
-              value={this.state.toggle}
+              value={this.state.special}
               onToggle={(value) => {
-                this.setState((prevState) => ({ toggle: !value }));
+                this.setState((prevState) => ({ special: !value }));
                 this.onSpecial(!value);
             }}/>
             <p className="list-item__settings-description">Enable special collection to recieve real-time updates whenever a "special filing" is made for {this.props.department}. If this feature is disabled you will still recieve the files at 5:00 p.m.</p>
@@ -61,9 +69,9 @@ export class Tracker extends React.Component {
             <p className="list-item__settings-description">Enable special collection to recieve real-time updates whenever a "special filing" is made for {this.props.department}. If this feature is disabled you will still recieve the files at 5:00 p.m.</p>
           </div>
         </div>
-        <div className="list-item__settings">
-          <p className="list-item__settings-description">{this.props.description}</p>
-        </div>
+      </div>
+      <div className={`list-item ${this.state.description ? "showing" : "collapsed"}`}>
+        <p className="list-item__settings-description">{this.props.description}</p>
       </div>
       </div>
     )

@@ -18,23 +18,21 @@
   border: 1px solid darken($off-white, 10%);
   border-top: none;
   color: $dark-grey;
-  display: flex;
-  flex-direction: column;
   padding: $s-size;
   text-decoration: none;
 
-/*   &:hover { // equivalent to .list-item:hover
-    background: $off-white;
-  } */
-
-
-
   @media (min-width: $desktop-breakpoint){ // when min-width is desktop-breakpoint or higher
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: $m-size;
     align-items: center;
   }
+}
+
+.list-item__button-container {
+  display: flex;
+  justify-content: center;
 }
 
 .selected {
@@ -61,16 +59,21 @@
 
 .list-item__title {
   flex: 5;
+  @media (max-width: $desktop-breakpoint) {
+    text-align: center;
+    margin-bottom: $m-size;
+  }
 }
 
 .showing {
   max-height: 9000px;
-  transition: max-height .2s ease-in;
+  transition: max-height .5s ease-in;
 }
 .collapsed {
   max-height: 0;
-  transition: max-height .2s ease-out;
+  transition: max-height .1s ease-out;
   overflow: hidden;
+  padding: 0px;
 }
 
 .list-item__settings {
