@@ -35,7 +35,7 @@ export class Tracker extends React.Component {
     return (
       <div>
         <div className={`list-item ${(this.state.info || this.state.description) ? "selected" : "unselected"}`}>
-        <p className="list-item__title"><a href={this.props.url}>{this.props.department}</a></p>
+        <p className="list-item__title"><a target="_blank" href={this.props.url}>{this.props.department}</a></p>
         <div className="list-item__button-container">
           <button className="list-item__info" onClick={this.onShowDescription} className="button--secondary">Info</button>
           <button className="list-item__info" onClick={this.onShowSettings} className="button--third">Settings</button>
