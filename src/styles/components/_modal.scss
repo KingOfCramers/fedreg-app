@@ -1,0 +1,31 @@
+.modal-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  flex-wrap: wrap;
+
+  @media (min-width: $desktop-breakpoint) {
+    flex-flow: row;
+    flex-wrap: wrap;
+  }
+
+}
+
+.modal-div button {
+  margin: $s-size;
+}
+
+.modal-description {
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+}
+
+.ReactModal__Content--after-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
