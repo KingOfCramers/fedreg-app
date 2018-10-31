@@ -7,20 +7,28 @@ export const addSetting = (setting) => ({
 });
 
 export const startAddSetting = ({ department = "", description = "", url= "" } = {}) => {
+if(!!department){
  return (dispatch, getState) => { // Thunk returns an object dispatch and getState!
    const setting = { department, description, url, special: true, rules: false };
    const uid = getState().auth.uid; // Access to the user id!
-
-   if(!!department){
-    return database.ref(`${uid}/`).push(setting).then((ref) => { // Returning for testing purposes...
-       dispatch(addSetting({
-        id: ref.key, // from firebase... This is the id of the actual document!!! We access it later inside startEditExpense
-        ...setting
-       }));
-    });
-   }
- };
-};
+    const data = [];
+    database.ref(`${uid}/`).once("value")
+      .then(snapshot => {
+        snapshot.forEach(childSnapshot => {
+          data.push(childSnapshot.val().department)
+        });
+        if(!data.includes(setting.department)){
+          return database.ref(`${uid}/`).push(setting).then((ref) => { // Returning for testing purposes...
+             dispatch(addSetting({
+              id: ref.key, // from firebase... This is the id of the actual document!!! We access it later inside startEditExpense
+              ...setting
+             }));
+          });
+        }
+      });
+    }
+  }
+}
 
 export const removeSetting = ({ id } = {}) => ({
    type: "REMOVE_SETTING",
