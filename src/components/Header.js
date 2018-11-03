@@ -10,7 +10,9 @@ export const Header = ({ startLogout }) => ( // Props need to be imported in a s
         <Link to="/dashboard" className="header__title">
           <h1>Federal Register</h1>
         </Link>
-        <button className="button--link" >Settings</button>
+        <Link to="/about">
+          <button className="button--link" >About</button>
+        </Link>
         <button className="button--link" onClick={startLogout}>Logout</button>
       </div>
     </div>
