@@ -10,6 +10,9 @@
   h1 {
     margin: 0;
     font-family: Cinzel;
+      @media (max-width: $desktop-breakpoint){ // when min-width is desktop-breakpoint or higher
+        font-size: $small-title-size;
+      }
   }
 }
 

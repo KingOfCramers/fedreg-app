@@ -8,11 +8,14 @@ export const Header = ({ startLogout }) => ( // Props need to be imported in a s
     <div className="content-container">
       <div className="header__content">
         <Link to="/dashboard" className="header__title">
-          <h1>Federal Register</h1>
+          <h1>Fedtracker</h1>
         </Link>
         <Link to="/about">
           <button className="button--link" >About</button>
         </Link>
+        <a href="https://twitter.com/HarrisonCramer" target="blank">
+          <button className="button--link" onClick={() => {}}>Contact</button>
+        </a>
         <button className="button--link" onClick={startLogout}>Logout</button>
       </div>
     </div>

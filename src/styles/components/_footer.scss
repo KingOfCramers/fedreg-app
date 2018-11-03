@@ -1,0 +1,18 @@
+.footer {
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer p {
+  font-size: $small-font-size;
+  text-align: center;
+  margin: 0;
+  padding: $s-size;
+  @media (max-width: $desktop-breakpoint){ // when min-width is desktop-breakpoint or higher
+    display: none;
+  }
+}

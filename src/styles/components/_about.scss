@@ -1,5 +1,13 @@
+.box-layout__about {
+  height: 80vh;
+  width: 100vw;
+   // For centering box...
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .box-layout__box--about {
-  background: fade-out(white, .15);
+  background: white;
   border-radius: 3px;
   padding: $l-size;
   text-align: center;

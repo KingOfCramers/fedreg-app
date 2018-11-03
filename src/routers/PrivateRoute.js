@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Route, Redirect } from "react-router-dom";
 import Header from "../components/Header.js"
-
+import Footer from "../components/Footer.js"
 
 export const PrivateRoute = ({ isAuthenticated, component: Component, ...rest })  => ( // The ...rest spread assigns the remaining props to the variable "rest".
   <Route {...rest} component={(props) => ( // Conditional return of component, or redirect, based on isAuthentication prop...
@@ -10,6 +10,7 @@ export const PrivateRoute = ({ isAuthenticated, component: Component, ...rest })
       <div>
         <Header />
         <Component {...props} />
+        <Footer />
       </div>
       ) : <Redirect to="/" />
     )

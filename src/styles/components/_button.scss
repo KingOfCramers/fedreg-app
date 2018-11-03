@@ -18,7 +18,7 @@
   }
 }
 
-.button:focus {
+button:focus {
   outline: none;
 }
 
@@ -30,6 +30,13 @@
   font-weight: 300;
   &:hover {
     background: darken($dark-gold, 5%);
+  }
+
+  @media (max-width: $desktop-breakpoint) {
+    font-size: $small-font-size;
+    margin: 0;
+    padding: $xs-size;
+    padding-right: 0;
   }
 
 }
