@@ -34,7 +34,7 @@ render(){
           <button
             className="button--clear" onClick={this.handleOpenModal}
           >Clear</button>
-          : <div className="prompt">Add trackers to get started</div>}
+          : <div className="box-layout--started"><p className="prompt">Add trackers to get started</p></div>}
         <Modal isOpen={this.state.showModal} contentLabel="Minimal Modal Example">
           <div className="modal-div">
           <p className="modal-description">This will delete all trackers and data. This action cannot be undone.</p>

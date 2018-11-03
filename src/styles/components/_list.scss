@@ -20,6 +20,7 @@
   color: $dark-grey;
   padding: $s-size;
   text-decoration: none;
+  background: white;
 
   @media (min-width: $desktop-breakpoint){ // when min-width is desktop-breakpoint or higher
     display: flex;
@@ -69,7 +70,21 @@
   max-height: 9000px;
   opacity: 1;
   transition: max-height .8s, opacity .6s;
+  background: white;
 }
+
+.prompt {
+  animation: blinker 1s linear infinite;
+  color: white;
+  font-size: $large-font-size;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 .collapsed {
   opacity: 0;
   max-height: 0px;
@@ -86,6 +101,7 @@
   border-top: none;
   border-bottom: none;
 }
+
 
 .list-item__settings:first-of-type {
   margin-top: 0px;
@@ -104,5 +120,11 @@
 
 .list-item__settings-description {
   font-size: $small-font-size;
+}
+
+.list-item__information {
+  font-size: $small-font-size;
+  margin-top: 0;
+  padding: $m-size;
 }
 

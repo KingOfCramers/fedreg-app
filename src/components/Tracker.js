@@ -71,7 +71,7 @@ export class Tracker extends React.Component {
         </div>
       </div>
       <div className={`${this.state.description ? "showing" : "collapsed"}`}>
-        <p className="list-item__settings-description">{this.props.description}</p>
+        <p className="list-item__information">{this.props.description}</p>
       </div>
       </div>
     )
