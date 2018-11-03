@@ -1,4 +1,6 @@
-import * as firebase from 'firebase'; // * as takes all named exports and puts them as methods on a new variable, called firebase
+import * as firebase from 'firebase/app'; // * as takes all named exports and puts them as methods on a new variable, called firebase
+import 'firebase/auth';
+import 'firebase/database';
 
 const config = {
    apiKey: process.env.FIREBASE_API_KEY, // these are accessed via webpack.config, which passes them down from node. Node gets them from our dotenv files
