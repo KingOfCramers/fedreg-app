@@ -53,7 +53,7 @@ export class Tracker extends React.Component {
                 this.setState((prevState) => ({ rules: value }));
                 this.onRules(value);
             }}/>
-            <p className="list-item__settings-description">Enable "All Filings" to recieve all types of documents filed in the federal register. Turn off "All Filings" to only recieve proposed or finalized rules.</p>
+            <p className="list-item__settings-filings">Enable "All Filings" to recieve all types of documents filed in the federal register. Turn off "All Filings" to only recieve proposed or finalized rules.</p>
           </div>
         </div>
         <div className="list-item__settings">
@@ -66,7 +66,7 @@ export class Tracker extends React.Component {
                 this.setState((prevState) => ({ special: !value }));
                 this.onSpecial(!value);
             }}/>
-            <p className="list-item__settings-description">Enable "Special Collection" to recieve PDFs filed throughout the day. By disabling this feature, you will still recieve a zip file of regular filings at 9:00 a.m. EST.</p>
+            <p className="list-item__settings-special">Enable "Special Collection" to recieve PDFs filed throughout the day. By disabling this feature, you will still recieve a zip file of regular filings at 9:00 a.m. EST.</p>
           </div>
         </div>
       </div>

@@ -69,7 +69,7 @@
 .showing {
   max-height: 9000px;
   opacity: 1;
-  transition: max-height .8s, opacity .6s;
+  transition: max-height .8s, opacity .4s;
   background: white;
 }
 
@@ -94,7 +94,6 @@
 
 .list-item__settings {
   @extend .list-item;
-  padding-top: 0px;
   padding-bottom: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -117,9 +116,19 @@
   padding: none $s-size;
 }
 
+.list-item__settings-title {
+  margin-top: 0;
+  padding-top: 0;
+}
 
-.list-item__settings-description {
+.list-item__settings-special {
   font-size: $small-font-size;
+}
+
+.list-item__settings-filings {
+  font-size: $small-font-size;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .list-item__information {
