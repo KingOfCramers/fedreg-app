@@ -43,32 +43,26 @@ export class Tracker extends React.Component {
         </div>
         </div>
       <div className={this.state.info ? "showing" : "collapsed" }>
-        <div className="list-item__settings">
-          <div className="list-item__settings-toggle">
-            <p className="list-item__settings-title">All Filings</p>
+          <div className="list-item__toggle">
+            <p className="list-item__title">All Filings</p>
             <ToggleButton
-              className="list-item__settings-button"
+              className="list-item__button"
               value={!this.state.rules}
               onToggle={(value) => {
                 this.setState((prevState) => ({ rules: value }));
                 this.onRules(value);
             }}/>
-            <p className="list-item__settings-filings">Enable "All Filings" to recieve all types of documents filed in the federal register. Turn off "All Filings" to only recieve proposed or finalized rules.</p>
           </div>
-        </div>
-        <div className="list-item__settings">
-          <div className="list-item__settings-toggle">
-            <p className="list-item__settings-title">Special Collection</p>
+          <div className="list-item__toggle">
+            <p className="list-item__title">Special Collection</p>
             <ToggleButton
-              className="list-item__settings-button"
+              className="list-item__button"
               value={this.state.special}
               onToggle={(value) => {
                 this.setState((prevState) => ({ special: !value }));
                 this.onSpecial(!value);
             }}/>
-            <p className="list-item__settings-special">Enable "Special Collection" to recieve PDFs filed throughout the day. By disabling this feature, you will still recieve a zip file of regular filings at 9:00 a.m. EST.</p>
           </div>
-        </div>
       </div>
       <div className={`${this.state.description ? "showing" : "collapsed"}`}>
         <p className="list-item__information">{this.props.description}</p>
