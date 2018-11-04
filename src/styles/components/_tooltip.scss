@@ -1,0 +1,78 @@
+#react-root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+section:last-child {
+  margin-bottom: 400px;
+}
+
+a {
+  display: inline-block;
+}
+
+.target {
+  display: inline-block;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.target .react-tooltip-lite {
+  cursor: default;
+}
+
+.flex-spread {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tip-heading {
+  margin: 0 0 10px;
+}
+
+.tip-list {
+  margin: 0;
+  padding: 0 0 0 15px;
+}
+
+.tip-list li {
+  margin: 5px 0;
+  padding: 0;
+}
+
+
+/* tooltip styles */
+  .react-tooltip-lite {
+    background: #333;
+    color: white;
+  }
+
+  .react-tooltip-lite a {
+    color: #86b0f4;
+    text-decoration: none;
+  }
+
+  .react-tooltip-lite a:hover {
+    color: #4286f4;
+  }
+
+  .react-tooltip-lite-up-arrow {
+    border-top: 10px solid #333;
+  }
+
+  .react-tooltip-lite-down-arrow {
+    border-bottom: 10px solid #333;
+  }
+
+  .react-tooltip-lite-right-arrow {
+    border-right: 10px solid #333;
+  }
+
+  .react-tooltip-lite-left-arrow {
+    border-left: 10px solid #333;
+  }

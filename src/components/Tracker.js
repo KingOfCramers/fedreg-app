@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { startRemoveSetting, startAddSetting, startToggleSpecial, startToggleRules } from "../actions/settings";
 import ToggleButton from "react-toggle-button";
+import Tooltip from 'react-tooltip-lite';
 
 export class Tracker extends React.Component {
   state = {
@@ -44,24 +45,29 @@ export class Tracker extends React.Component {
         </div>
       <div className={this.state.info ? "showing" : "collapsed" }>
           <div className="list-item__toggle">
-            <p className="list-item__title">All Filings</p>
-            <ToggleButton
-              className="list-item__button"
-              value={!this.state.rules}
-              onToggle={(value) => {
-                this.setState((prevState) => ({ rules: value }));
-                this.onRules(value);
-            }}/>
+            <div className="list-item__settings-title">All Filings</div>
+            <Tooltip content="Enable 'All Filings' to recieve all types of documents filed in the federal register. Turn off to only recieve proposed or finalized rules." direction="right-end" arrow={true} >
+              <ToggleButton
+                display="block"
+                className="list-item__button"
+                value={!this.state.rules}
+                onToggle={(value) => {
+                  this.setState((prevState) => ({ rules: value }));
+                  this.onRules(value);
+              }}/>
+            </Tooltip>
           </div>
           <div className="list-item__toggle">
-            <p className="list-item__title">Special Collection</p>
-            <ToggleButton
-              className="list-item__button"
-              value={this.state.special}
-              onToggle={(value) => {
-                this.setState((prevState) => ({ special: !value }));
-                this.onSpecial(!value);
-            }}/>
+            <div className="list-item__settings-title">Special Collection</div>
+            <Tooltip content="Enable 'Special Collection' to recieve PDFs filed throughout the day. By disabling this feature, you will still recieve a zip file of regular filings at 9:00 a.m. EST." direction="right-end" arrow={true} id="custom-tip">
+              <ToggleButton
+                className="list-item__button"
+                value={this.state.special}
+                onToggle={(value) => {
+                  this.setState((prevState) => ({ special: !value }));
+                  this.onSpecial(!value);
+              }}/>
+            </Tooltip>
           </div>
       </div>
       <div className={`${this.state.description ? "showing" : "collapsed"}`}>

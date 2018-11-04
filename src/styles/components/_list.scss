@@ -103,6 +103,16 @@
 }
 
 
+.list-item__settings-title {
+  flex: 5;
+  display: inline-flex;
+  padding-right: $xs-size;
+  @media (max-width: $desktop-breakpoint) {
+    text-align: center;
+  }
+}
+
+
 .list-item__settings:first-of-type {
   margin-top: 0px;
   border-top: none;
@@ -113,8 +123,9 @@
 }
 
 
-.list-items__toggle {
-  padding: none $s-size;
+.list-item__toggle {
+  display: inline-flex;
+  padding: $s-size;
 }
 
 .list-item__title {
