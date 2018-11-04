@@ -29,7 +29,9 @@ button:focus {
   padding: $s-size;
   font-weight: 300;
   &:hover {
-    background: darken($dark-gold, 5%);
+    @media (min-width: $desktop-breakpoint) {
+      background: darken($dark-gold, 5%);
+    }
   }
 
   @media (max-width: $desktop-breakpoint) {

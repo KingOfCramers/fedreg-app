@@ -41,6 +41,7 @@
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
     "request": "^2.88.0",
+    "sane": "4.0.2",
     "sass-loader": "6.0.6",
     "style-loader": "0.18.2",
     "validator": "8.0.0",
