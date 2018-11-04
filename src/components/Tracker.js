@@ -3,14 +3,15 @@ import { connect } from "react-redux";
 import { startRemoveSetting, startAddSetting, startToggleSpecial, startToggleRules } from "../actions/settings";
 import ToggleButton from "react-toggle-button";
 import Tooltip from 'react-tooltip-lite';
-import Keywords from "./Keywords";
+import Search from "./Search";
 
 export class Tracker extends React.Component {
   state = {
     info: false,
     special: this.props.special,
     rules: this.props.rules,
-    description: false
+    description: false,
+    keyFig: this.props.keyFig
   }
 
   onShowDescription = () => {
@@ -70,7 +71,7 @@ export class Tracker extends React.Component {
               }}/>
             </Tooltip>
           </div>
-          <Keywords />
+          <Search />
       </div>
       <div className={`${this.state.description ? "showing" : "collapsed"}`}>
         <p className="list-item__information">{this.props.description}</p>
