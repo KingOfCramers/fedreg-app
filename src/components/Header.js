@@ -7,9 +7,9 @@ export const Header = ({ startLogout }) => ( // Props need to be imported in a s
   <header className="header">
     <div className="content-container">
       <div className="header__content">
-        <Link to="/dashboard" className="header__title">
+        <div className="header__title">
           <h1>Fedtracker</h1>
-        </Link>
+        </div>
         <Link to="/about">
           <button className="button--link" >About</button>
         </Link>
