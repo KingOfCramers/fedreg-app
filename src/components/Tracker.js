@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { startRemoveSetting, startAddSetting, startToggleSpecial, startToggleRules } from "../actions/settings";
 import ToggleButton from "react-toggle-button";
 import Tooltip from 'react-tooltip-lite';
+import Keywords from "./Keywords";
 
 export class Tracker extends React.Component {
   state = {
@@ -46,7 +47,7 @@ export class Tracker extends React.Component {
       <div className={this.state.info ? "showing" : "collapsed" }>
           <div className="list-item__toggle">
             <div className="list-item__settings-title">All Filings</div>
-            <Tooltip content="Enable 'All Filings' to recieve all types of documents filed in the federal register. Turn off to only recieve proposed or finalized rules." direction="right-end" arrow={true} >
+            <Tooltip content="Enable 'All Filings' to recieve all types of documents filed in the federal register. Turn off to only recieve proposed or finalized rules." direction="up" arrow={true} >
               <ToggleButton
                 display="block"
                 className="list-item__button"
@@ -59,7 +60,7 @@ export class Tracker extends React.Component {
           </div>
           <div className="list-item__toggle">
             <div className="list-item__settings-title">Special Collection</div>
-            <Tooltip content="Enable 'Special Collection' to recieve PDFs filed throughout the day. By disabling this feature, you will still recieve a zip file of regular filings at 9:00 a.m. EST." direction="right-end" arrow={true} id="custom-tip">
+            <Tooltip content="Enable 'Special Collection' to recieve PDFs filed throughout the day. By disabling this feature, you will still recieve a zip file of regular filings at 9:00 a.m. EST." direction="up" arrow={true} id="custom-tip">
               <ToggleButton
                 className="list-item__button"
                 value={this.state.special}
@@ -69,6 +70,7 @@ export class Tracker extends React.Component {
               }}/>
             </Tooltip>
           </div>
+          <Keywords />
       </div>
       <div className={`${this.state.description ? "showing" : "collapsed"}`}>
         <p className="list-item__information">{this.props.description}</p>

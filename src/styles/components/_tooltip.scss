@@ -1,55 +1,9 @@
-#react-root {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
-section {
-  margin-bottom: 50px;
-}
-
-section:last-child {
-  margin-bottom: 400px;
-}
-
-a {
-  display: inline-block;
-}
-
-.target {
-  display: inline-block;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.target .react-tooltip-lite {
-  cursor: default;
-}
-
-.flex-spread {
-  display: flex;
-  justify-content: space-between;
-}
-
-.tip-heading {
-  margin: 0 0 10px;
-}
-
-.tip-list {
-  margin: 0;
-  padding: 0 0 0 15px;
-}
-
-.tip-list li {
-  margin: 5px 0;
-  padding: 0;
-}
-
 
 /* tooltip styles */
   .react-tooltip-lite {
     background: #333;
     color: white;
+    font-size: $s-size;
   }
 
   .react-tooltip-lite a {
