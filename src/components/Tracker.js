@@ -12,7 +12,6 @@ export class Tracker extends React.Component {
     special: this.props.special,
     rules: this.props.rules,
     description: false,
-    keyFig: this.props.keyFig,
     search: this.props.search
   }
 
@@ -39,12 +38,12 @@ export class Tracker extends React.Component {
   render(){
     return (
       <div>
-        <div className={`list-item ${(this.state.info || this.state.description) ? "selected" : "unselected"}`}>
-        <p className="list-item__title"><a target="_blank" href={this.props.url}>{this.props.department}</a></p>
-        <div className="list-item__button-container">
-          <button className="list-item__info" onClick={this.onShowDescription} className="button--secondary">Info</button>
-          <button className="list-item__info" onClick={this.onShowSettings} className="button--third">Settings</button>
-          <button className="list-item__remove" onClick={this.onRemove} className="button">Delete</button>
+        <div className={`tracker ${(this.state.info || this.state.description) ? "selected" : "unselected"}`}>
+        <p className="tracker__title"><a target="_blank" href={this.props.url}>{this.props.department}</a></p>
+        <div className="tracker__buttons">
+          <button className="tracker__info" onClick={this.onShowDescription} className="button--secondary">Info</button>
+          <button className="tracker__info" onClick={this.onShowSettings} className="button--third">Settings</button>
+          <button className="tracker__remove" onClick={this.onRemove} className="button">Delete</button>
         </div>
         </div>
       <div className={this.state.info ? "showing" : "collapsed" }>
@@ -63,7 +62,7 @@ export class Tracker extends React.Component {
         <Search id={this.props.id} disabled={!!this.props.search}/>
       </div>
       <div className={`${this.state.description ? "showing" : "collapsed"}`}>
-        <p className="list-item__information">{this.props.description}</p>
+        <p className="tracker__information">{this.props.description}</p>
       </div>
       </div>
     )

@@ -1,0 +1,87 @@
+.tracker {
+  border: 1px solid darken($off-white, 10%);
+  border-top: none;
+  color: $dark-grey;
+  padding: $s-size;
+  text-decoration: none;
+  background: white;
+
+  &.selected {
+    background: $off-white;
+  }
+
+  @media (min-width: $desktop-breakpoint){ // when min-width is desktop-breakpoint or higher
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: $m-size;
+    align-items: center;
+  }
+}
+
+.prompt {
+  text-align: center;
+  margin-top: $l-size;
+  font-style: italic;
+}
+
+.tracker:first-of-type {
+  margin-top: $s-size;
+  border-top: 1px solid darken($off-white, 10%);
+}
+
+.tracker a {
+  color: black;
+  &:hover {
+    color: $blue;
+  }
+}
+
+.tracker__title {
+  margin: 0;
+  padding-top: 0;
+  @media (max-width: $desktop-breakpoint) {
+    text-align: center;
+    margin-bottom: $s-size;
+  }
+}
+
+.tracker__buttons {
+  align-items: center;
+  @media (max-width: $desktop-breakpoint) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.tracker__information {
+  font-size: $small-font-size;
+  padding: 0px;
+  margin: 0px;
+}
+
+.showing {
+  max-height: 9000px;
+  opacity: 1;
+  transition: max-height .8s, opacity .4s;
+  background: white;
+  padding: $s-size;
+}
+
+.collapsed {
+  opacity: 0;
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.prompt {
+  animation: blinker 1s linear infinite;
+  color: white;
+  font-size: $large-font-size;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}

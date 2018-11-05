@@ -13,7 +13,7 @@ export class DashboardPage extends React.Component {
         <Selector className="selector"/>
           {this.props.settings.map((data) => {
 
-            return <Tracker key={data.department} {...data} keyFig="abc123"/>
+            return <Tracker key={data.department} {...data}/>
           })}
         <Clear onClick={this.handleOpenModal} />
       </div>

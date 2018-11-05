@@ -14,12 +14,12 @@ export class Toggle extends React.Component {
 
   render(){
     return (
-      <div className="list-item__toggle">
-        <div className="list-item__settings-title">{this.props.title}</div>
+      <div className="toggle">
+        <div className="toggle__title">{this.props.title}</div>
         <Tooltip content={this.props.tooltipContent} direction="up" arrow={true} >
           <ToggleButton
             display="block"
-            className="list-item__button"
+            className="tracker__button"
             value={!this.state.toggleVal}
             onToggle={(value) => {
               this.setState({ toggleVal: value });
