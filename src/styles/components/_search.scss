@@ -1,3 +1,18 @@
 .search {
   display: inline-flex;
+  padding: $s-size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tags {
+  min-width: 200px;
+}
+
+.search__title {
+  padding-right: $xs-size;
+  @media (max-width: $desktop-breakpoint) {
+    text-align: center;
+  }
 }

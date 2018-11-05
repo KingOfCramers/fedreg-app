@@ -1,6 +1,4 @@
 .toggle__title {
-  flex: 5;
-  display: inline-flex;
   padding-right: $xs-size;
   @media (max-width: $desktop-breakpoint) {
     text-align: center;
@@ -8,6 +6,8 @@
 }
 
 .toggle {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: $s-size;
 }

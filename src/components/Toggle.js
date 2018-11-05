@@ -16,7 +16,14 @@ export class Toggle extends React.Component {
     return (
       <div className="toggle">
         <div className="toggle__title">{this.props.title}</div>
-        <Tooltip content={this.props.tooltipContent} direction="up" arrow={true} >
+        <Tooltip
+          content={this.props.tooltipContent}
+          direction="up"
+          arrow={true}
+          hoverDelay={400}
+          distance={12}
+          padding={"5px"}
+        >
           <ToggleButton
             display="block"
             className="tracker__button"

@@ -66,6 +66,7 @@
   transition: max-height .8s, opacity .4s;
   background: white;
   padding: $s-size;
+  display: flex;
 }
 
 .collapsed {

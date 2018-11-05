@@ -50,7 +50,7 @@ export class Tracker extends React.Component {
         <Toggle
           toggleVal={this.state.rules}
           title="All Filings"
-          tooltipContent="Enable 'All Filings' to recieve all types of documents filed in the federal register. Turn off to only recieve proposed or finalized rules."
+          tooltipContent={"Enable 'All Filings' to recieve all types of documents filed in the federal register. Turn off to only recieve proposed or finalized rules."}
           toggleFunc={this.onRules}
         />
         <Toggle

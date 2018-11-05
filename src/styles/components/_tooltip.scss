@@ -1,9 +1,16 @@
-
 /* tooltip styles */
   .react-tooltip-lite {
     background: #333;
     color: white;
     font-size: $s-size;
+    width: 250px;
+    @media (max-width: $desktop-breakpoint){
+
+    }
+  }
+
+  .my-tooltip {
+    color: green;
   }
 
   .react-tooltip-lite a {

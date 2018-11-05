@@ -1,7 +1,79 @@
 import React from "react";
 import { connect } from "react-redux";
 import { startAddSearch } from "../actions/settings";
+import Tooltip from "react-tooltip-lite";
 
+import CreatableSelect from 'react-select/lib/Creatable';
+
+const components = {
+  DropdownIndicator: null,
+};
+
+const createOption = (label: string) => ({
+  label,
+  value: label,
+});
+
+class CreatableInputOnly extends React.Component {
+  state = {
+    inputValue: '',
+    value: [],
+  };
+
+  handleChange = (value: any, actionMeta: any) => {
+    this.setState({ value });
+  };
+  handleInputChange = (inputValue: string) => {
+    this.setState({ inputValue });
+  };
+  handleKeyDown = (event: SyntheticKeyboardEvent<HTMLElement>) => {
+    const { inputValue, value } = this.state;
+    if (!inputValue) return;
+    switch (event.key) {
+      case 'Enter':
+      case 'Tab':
+        console.log(value);
+        this.setState({
+          inputValue: '',
+          value: [...value, createOption(inputValue)],
+        });
+        event.preventDefault();
+    }
+  };
+  render() {
+    const { inputValue, value } = this.state;
+    return (
+        <div className="search">
+          <div className="search__title">Filter: </div>
+          <Tooltip
+            content={"Tooltip"}
+            direction="up"
+            arrow={true}
+            hoverDelay={400}
+            distance={12}
+            padding={"5px"}
+          >
+            <CreatableSelect
+              className={"tags"}
+              components={components}
+              inputValue={inputValue}
+              isClearable
+              isMulti
+              menuIsOpen={false}
+              onChange={this.handleChange}
+              onInputChange={this.handleInputChange}
+              onKeyDown={this.handleKeyDown}
+              placeholder="Add filters here..."
+              value={value}
+            />
+          </Tooltip>
+        </div>
+    );
+  }
+}
+
+module.exports = CreatableInputOnly;
+/*
 class Search extends React.Component {
   constructor(props){
     super(props);
@@ -38,4 +110,4 @@ const mapDispatchToProps = (dispatch,props) => ({
 });
 
 
-module.exports = connect(null, mapDispatchToProps)(Search);
+module.exports = connect(null, mapDispatchToProps)(Search);*/
