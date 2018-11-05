@@ -80,7 +80,6 @@ export const startToggleSpecial = ({ special, id }) => {
 };
 
 export const toggleSpecial = ({ special, id }) => {
-  console.log(special, id )
   return {
     type: "TOGGLE_SPECIAL",
     special,
