@@ -46,6 +46,12 @@
   }
 }
 
+.tracker__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .tracker__information {
   font-size: $small-font-size;
   padding: 0px;
