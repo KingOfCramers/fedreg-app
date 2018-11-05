@@ -46,14 +46,6 @@
   }
 }
 
-.tracker__buttons {
-  align-items: center;
-  @media (max-width: $desktop-breakpoint) {
-    display: flex;
-    justify-content: center;
-  }
-}
-
 .tracker__information {
   font-size: $small-font-size;
   padding: 0px;
@@ -67,6 +59,7 @@
   background: white;
   padding: $s-size;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .collapsed {

@@ -12,7 +12,6 @@ export class Tracker extends React.Component {
     special: this.props.special,
     rules: this.props.rules,
     description: false,
-    search: this.props.search
   }
 
   onShowDescription = () => {
@@ -33,6 +32,10 @@ export class Tracker extends React.Component {
 
   onRules = (bool) => {
     this.props.startToggleRules({ rules: bool, id: this.props.id })
+  }
+
+  onSearch = (val) => {
+    console.log(val)
   }
 
   render(){
@@ -59,7 +62,13 @@ export class Tracker extends React.Component {
           tooltipContent="Enable 'Special Collection' to recieve PDFs filed throughout the day. By disabling this feature, you will still recieve a zip file of regular filings at 9:00 a.m. EST."
           toggleFunc={this.onSpecial}
         />
-        <Search id={this.props.id} disabled={!!this.props.search}/>
+        <Search
+          id={this.props.id}
+          title="Filter"
+          tooltipContent="Search for phrases here to further narrow the results."
+          search={["boy", "bag"]}
+          onSearch={this.onSearch}
+        />
       </div>
       <div className={`${this.state.description ? "showing" : "collapsed"}`}>
         <p className="tracker__information">{this.props.description}</p>
