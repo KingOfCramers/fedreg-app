@@ -4,6 +4,7 @@ import { startRemoveSetting, startAddSetting, startToggleSpecial, startToggleRul
 import ToggleButton from "react-toggle-button";
 import Tooltip from 'react-tooltip-lite';
 import Search from "./Search";
+import Toggle from "./Toggle";
 
 export class Tracker extends React.Component {
   state = {
@@ -11,7 +12,8 @@ export class Tracker extends React.Component {
     special: this.props.special,
     rules: this.props.rules,
     description: false,
-    keyFig: this.props.keyFig
+    keyFig: this.props.keyFig,
+    search: this.props.search
   }
 
   onShowDescription = () => {
@@ -46,19 +48,12 @@ export class Tracker extends React.Component {
         </div>
         </div>
       <div className={this.state.info ? "showing" : "collapsed" }>
-          <div className="list-item__toggle">
-            <div className="list-item__settings-title">All Filings</div>
-            <Tooltip content="Enable 'All Filings' to recieve all types of documents filed in the federal register. Turn off to only recieve proposed or finalized rules." direction="up" arrow={true} >
-              <ToggleButton
-                display="block"
-                className="list-item__button"
-                value={!this.state.rules}
-                onToggle={(value) => {
-                  this.setState((prevState) => ({ rules: value }));
-                  this.onRules(value);
-              }}/>
-            </Tooltip>
-          </div>
+        <Toggle
+          toggleVal={this.state.rules }
+          title="All Filings"
+          tooltipContent="Enable 'All Filings' to recieve all types of documents filed in the federal register. Turn off to only recieve proposed or finalized rules."
+          toggleFunc={this.onRules}
+        />
           <div className="list-item__toggle">
             <div className="list-item__settings-title">Special Collection</div>
             <Tooltip content="Enable 'Special Collection' to recieve PDFs filed throughout the day. By disabling this feature, you will still recieve a zip file of regular filings at 9:00 a.m. EST." direction="up" arrow={true} id="custom-tip">
@@ -71,7 +66,7 @@ export class Tracker extends React.Component {
               }}/>
             </Tooltip>
           </div>
-          <Search id={this.props.id} />
+          <Search id={this.props.id} disabled={!!this.props.search}/>
       </div>
       <div className={`${this.state.description ? "showing" : "collapsed"}`}>
         <p className="list-item__information">{this.props.description}</p>

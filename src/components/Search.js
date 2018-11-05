@@ -25,8 +25,8 @@ class Search extends React.Component {
     return (
       <form className="search" onSubmit={this.handleSubmit}>
         <div className="form-group">
-          <label>Search</label>
-          <input name="search" onChange={this.handleChange} value={this.state.search} />
+          <label>Filter</label>
+          <input name="search" onChange={this.handleChange} value={this.state.search} disabled={this.props.disabled} />
         </div>
       </form>
     );

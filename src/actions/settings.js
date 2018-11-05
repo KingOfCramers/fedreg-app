@@ -117,9 +117,10 @@ export const startClearSettings = () => {
   }
 }
 
-export const addSearch = (search) => ({
+export const addSearch = ({ search, id }) => ({
   type: "ADD_SEARCH",
-  search
+  search,
+  id
 });
 
 export const startAddSearch = ({ search, id }) => {
@@ -129,7 +130,7 @@ export const startAddSearch = ({ search, id }) => {
       .update({
         search
       })
-      .then(() => dispatch(addSearch(search)));
+      .then(() => dispatch(addSearch({ search, id })));
   };
 };
 
