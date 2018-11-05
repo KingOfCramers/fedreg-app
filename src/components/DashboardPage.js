@@ -16,11 +16,6 @@ export class DashboardPage extends React.Component {
             return <Tracker key={data.department} {...data} keyFig="abc123"/>
           })}
         <Clear onClick={this.handleOpenModal} />
-        <Selector className="selector"/>
-          {this.props.settings.map((data) => {
-            return <Tracker key={data.department} {...data} />
-          })}
-        <Clear onClick={this.handleOpenModal} />
       </div>
     )
   }

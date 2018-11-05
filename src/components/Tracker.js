@@ -71,7 +71,7 @@ export class Tracker extends React.Component {
               }}/>
             </Tooltip>
           </div>
-          <Search />
+          <Search id={this.props.id} />
       </div>
       <div className={`${this.state.description ? "showing" : "collapsed"}`}>
         <p className="list-item__information">{this.props.description}</p>

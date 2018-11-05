@@ -6,10 +6,10 @@ export const addSetting = (setting) => ({
   setting
 });
 
-export const startAddSetting = ({ department = "", description = "", url= "" } = {}) => {
+export const startAddSetting = ({ department = "", description = "", url= "", special=true, rules=false, search="" } = {}) => {
 if(!!department){
  return (dispatch, getState) => { // Thunk returns an object dispatch and getState!
-   const setting = { department, description, url, special: true, rules: false };
+   const setting = { department, description, url, special, rules, search };
    const uid = getState().auth.uid; // Access to the user id!
     const data = [];
     database.ref(`${uid}/`).once("value")
@@ -75,14 +75,18 @@ export const startToggleSpecial = ({ special, id }) => {
       .update({
         special
       })
-      .then(() => dispatch(toggleSpecial(special)));
+      .then(() => dispatch(toggleSpecial({ special, id })));
     };
 };
 
-export const toggleSpecial = (special) => ({
-  type: "TOGGLE_SPECIAL",
-  special
-});
+export const toggleSpecial = ({ special, id }) => {
+  console.log(special, id )
+  return {
+    type: "TOGGLE_SPECIAL",
+    special,
+    id
+  }
+}
 
 export const startToggleRules = ({ rules, id }) => {
   return (dispatch, getState) => {
@@ -91,13 +95,14 @@ export const startToggleRules = ({ rules, id }) => {
       .update({
         rules
       })
-      .then(() => dispatch(toggleRules(rules)));
+      .then(() => dispatch(toggleRules({ rules, id })));
     };
 };
 
-export const toggleRules = (rules) => ({
+export const toggleRules = ({ rules, id }) => ({
   type: "TOGGLE_RULES",
-  rules
+  rules,
+  id
 });
 
 export const clearSettings = () => ({
@@ -112,8 +117,21 @@ export const startClearSettings = () => {
   }
 }
 
+export const addSearch = (search) => ({
+  type: "ADD_SEARCH",
+  search
+});
 
-
+export const startAddSearch = ({ search, id }) => {
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`${uid}/${id}`)
+      .update({
+        search
+      })
+      .then(() => dispatch(addSearch(search)));
+  };
+};
 
 
 

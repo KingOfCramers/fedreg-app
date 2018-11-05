@@ -16,7 +16,7 @@ const settingsReducer = (state = settingsReducerDefaultState, action) => {
         if(setting.id === action.id){
           return {
             ...setting,
-            special: setting.special
+            special: action.special
           }
         } else {
           return setting;
@@ -27,12 +27,23 @@ const settingsReducer = (state = settingsReducerDefaultState, action) => {
         if(setting.id === action.id){
           return {
             ...setting,
-            rules: setting.rules
+            rules: action.rules
           }
         } else {
           return setting;
         }
       });
+    case "ADD_SEARCH" :
+      return state.map(setting => {
+        if(setting.id === action.id){
+          return {
+            ...setting,
+            search: action.search
+          }
+        } else {
+          return setting;
+        }
+      })
     case "CLEAR_SETTINGS":
       return settingsReducerDefaultState;
     default:
