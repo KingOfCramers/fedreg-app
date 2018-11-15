@@ -36,10 +36,15 @@ const settingsReducer = (state = settingsReducerDefaultState, action) => {
     case "ADD_SEARCH" :
       return state.map(setting => {
         if(setting.id === action.id){
-          console.log(action.search, setting.search)
-          return {
-            ...setting,
-            search: setting.search.concat(action.search)
+          if(setting.search){ // If the setting.search object exists....
+            setting.search[action.searchId] = action.search; // append  this...
+            console.log("EXISTING SEARCHES: ", setting)
+            return setting; // and return new settings...
+          } else { // If no settings...
+            setting.search = {};
+            setting.search[action.searchId] = action.search;
+            console.log("NO EXISTING SEARCHES: ", setting)
+            return setting;
           }
         } else {
           return setting;

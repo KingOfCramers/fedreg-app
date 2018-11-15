@@ -6,10 +6,10 @@ export const addSetting = (setting) => ({
   setting
 });
 
-export const startAddSetting = ({ department = "", description = "", url= "", special=true, rules=false, search=[] } = {}) => {
+export const startAddSetting = ({ department = "", description = "", url= "", special=true, rules=false } = {}) => {
 if(!!department){
  return (dispatch, getState) => { // Thunk returns an object dispatch and getState!
-   const setting = { department, description, url, special, rules, search };
+   const setting = { department, description, url, special, rules };
    const uid = getState().auth.uid; // Access to the user id!
     const data = [];
     database.ref(`${uid}/`).once("value")
@@ -113,29 +113,56 @@ export const startClearSettings = () => {
     const uid = getState().auth.uid;
     return database.ref(`${uid}`).remove()
       .then(() => dispatch(clearSettings()));
-  }
-}
-
-export const addSearch = ({ search, id }) => ({
-  type: "ADD_SEARCH",
-  search,
-  id
-});
-
-export const startAddSearch = ({ search, id }) => {
-  console.log(search, id)
-  return (dispatch, getState) => {
-    const uid = getState().auth.uid;
-    return database.ref(`${uid}/${id}`)
-      .update({
-        search
-      })
-      .then(() => dispatch(addSearch({ search, id })));
   };
 };
 
+export const addSearch = ({ search, id, searchId }) => ({
+  type: "ADD_SEARCH",
+  search,
+  id,
+  searchId
+});
 
+export const startAddSearch = ({ search, id }) => {
+  console.log("term to add: ", search, "user id: ", id)
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`${uid}/${id}/search`)
+      .push({
+        search
+      })
+      .then((ref) => dispatch(addSearch({
+        id,
+        searchId: ref.key, // from firebase... This is the id of the search.
+        search
+      })));
+  };
+};
+/*
+export const removeSearch = ({ search, id, searchId }) => ({
+  type: "ADD_SEARCH",
+  search,
+  id,
+  searchId
+});
 
+export const startRemoveSearch = ({ search, id }) => {
+  console.log("term to remove: ", search, "user id: ", id)
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`${uid}/${id}/search`)
+      .push({
+        search
+      })
+      .then((ref) => dispatch(addSearch({
+        id,
+        searchId: ref.key, // from firebase... This is the id of the search.
+        search
+      })));
+  };
+};
+
+*/
 
 
 
