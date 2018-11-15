@@ -79,7 +79,11 @@ class CreatableInputOnly extends React.Component {
   }
 }
 
-module.exports = CreatableInputOnly;
+const mapStateToProps = (state,props) => ({
+  settings: state.settings
+});
+
+module.exports = connect(mapStateToProps, null)(CreatableInputOnly);
 /*
 class Search extends React.Component {
   constructor(props){

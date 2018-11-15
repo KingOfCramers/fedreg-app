@@ -123,14 +123,11 @@ export const addSearch = ({ search, id, searchId }) => ({
   searchId
 });
 
-export const startAddSearch = ({ search, id }) => {
-  console.log("term to add: ", search, "user id: ", id)
+export const startAddSearch = ({ search, id, searchId }) => {
   return (dispatch, getState) => {
     const uid = getState().auth.uid;
     return database.ref(`${uid}/${id}/search`)
-      .push({
-        search
-      })
+      .push(search)
       .then((ref) => dispatch(addSearch({
         id,
         searchId: ref.key, // from firebase... This is the id of the search.
@@ -138,31 +135,6 @@ export const startAddSearch = ({ search, id }) => {
       })));
   };
 };
-/*
-export const removeSearch = ({ search, id, searchId }) => ({
-  type: "ADD_SEARCH",
-  search,
-  id,
-  searchId
-});
-
-export const startRemoveSearch = ({ search, id }) => {
-  console.log("term to remove: ", search, "user id: ", id)
-  return (dispatch, getState) => {
-    const uid = getState().auth.uid;
-    return database.ref(`${uid}/${id}/search`)
-      .push({
-        search
-      })
-      .then((ref) => dispatch(addSearch({
-        id,
-        searchId: ref.key, // from firebase... This is the id of the search.
-        search
-      })));
-  };
-};
-
-*/
 
 
 

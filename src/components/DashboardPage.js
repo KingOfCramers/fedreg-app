@@ -12,7 +12,7 @@ export class DashboardPage extends React.Component {
       <div className="content-container">
         <Selector className="selector"/>
           {this.props.settings.map((data) => {
-
+            console.log(data)
             return <Tracker key={data.department} {...data}/>
           })}
         <Clear />
