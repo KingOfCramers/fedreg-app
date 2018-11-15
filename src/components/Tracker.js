@@ -35,8 +35,7 @@ export class Tracker extends React.Component {
     this.setState((prevState) => ({ description: !prevState.description }));
   }
 
-  onRemove = () => {
-
+  onRemoveSetting = () => {
     this.props.startRemoveSetting({id: this.props.id})
   }
 
@@ -102,9 +101,9 @@ export class Tracker extends React.Component {
       </div>
       <Modal isOpen={this.state.showModal}>
         <div className="modal-div">
-        <p className="modal-description">This will delete all trackers and data. This action cannot be undone.</p>
+        <p className="modal-description">Delete this tracker?</p>
         <button className="button--secondary" onClick={this.handleCloseModal}>Cancel</button>
-        <button className="button--clear" onClick={this.handleClear}>Delete All Trackers</button>
+        <button className="button--clear" onClick={this.onRemoveSetting}>Delete</button>
         </div>
       </Modal>
       </div>
