@@ -13,8 +13,7 @@ class Selector extends React.Component {
     this.props.startAddSetting({
       department: selectedOption.value,
       description: selectedOption.description,
-      url: selectedOption.url,
-      search: []
+      url: selectedOption.url
     });
 
     this.setState({ selectedOption: null });
@@ -33,7 +32,7 @@ class Selector extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch,props) => ({
-  startAddSetting: ({ department, description, url, search }) => dispatch(startAddSetting({ department, description, url, search }))
+  startAddSetting: ({ department, description, url }) => dispatch(startAddSetting({ department, description, url }))
 });
 
 export default connect(null, mapDispatchToProps)(Selector);

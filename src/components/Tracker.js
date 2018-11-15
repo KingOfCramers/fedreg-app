@@ -1,5 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
+
+import Modal from "react-modal";
+import ToggleButton from "react-toggle-button";
+import Tooltip from 'react-tooltip-lite';
+
 import {
   startRemoveSetting,
   startAddSetting,
@@ -7,17 +12,23 @@ import {
   startToggleRules,
   startAddSearch
 } from "../actions/settings";
-import ToggleButton from "react-toggle-button";
-import Tooltip from 'react-tooltip-lite';
 import Search from "./Search";
 import Toggle from "./Toggle";
 
 export class Tracker extends React.Component {
-  state = {
-    info: false,
-    special: this.props.special,
-    rules: this.props.rules,
-    description: false,
+  constructor(props){
+    super(props);
+    this.state = {
+      info: false,
+      special: this.props.special,
+      rules: this.props.rules,
+      description: false,
+      showModal: false,
+      search: this.props.search
+    }
+
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
   onShowDescription = () => {
@@ -25,6 +36,7 @@ export class Tracker extends React.Component {
   }
 
   onRemove = () => {
+
     this.props.startRemoveSetting({id: this.props.id})
   }
 
@@ -44,6 +56,15 @@ export class Tracker extends React.Component {
     this.props.startAddSearch({ search, id: this.props.id })
   }
 
+  handleOpenModal() {
+    this.setState({ showModal: true });
+  }
+
+  handleCloseModal () {
+    this.setState({ showModal: false });
+  }
+
+
   render(){
     return (
       <div>
@@ -52,7 +73,7 @@ export class Tracker extends React.Component {
         <div className="tracker__buttons">
           <button className="tracker__info" onClick={this.onShowDescription} className="button--secondary">Info</button>
           <button className="tracker__info" onClick={this.onShowSettings} className="button--third">Settings</button>
-          <button className="tracker__remove" onClick={this.onRemove} className="button">Delete</button>
+          <button className="tracker__remove" onClick={this.handleOpenModal} className="button">Delete</button>
         </div>
         </div>
       <div className={this.state.info ? "showing" : "collapsed" }>
@@ -79,6 +100,13 @@ export class Tracker extends React.Component {
       <div className={`${this.state.description ? "showing" : "collapsed"}`}>
         <p className="tracker__information">{this.props.description}</p>
       </div>
+      <Modal isOpen={this.state.showModal}>
+        <div className="modal-div">
+        <p className="modal-description">This will delete all trackers and data. This action cannot be undone.</p>
+        <button className="button--secondary" onClick={this.handleCloseModal}>Cancel</button>
+        <button className="button--clear" onClick={this.handleClear}>Delete All Trackers</button>
+        </div>
+      </Modal>
       </div>
     )
   };
