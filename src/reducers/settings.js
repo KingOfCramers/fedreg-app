@@ -36,9 +36,10 @@ const settingsReducer = (state = settingsReducerDefaultState, action) => {
     case "ADD_SEARCH" :
       return state.map(setting => {
         if(setting.id === action.id){
+          console.log(action.search, setting.search)
           return {
             ...setting,
-            search: action.search
+            search: setting.search.concat(action.search)
           }
         } else {
           return setting;

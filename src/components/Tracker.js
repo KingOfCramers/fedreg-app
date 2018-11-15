@@ -1,6 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
-import { startRemoveSetting, startAddSetting, startToggleSpecial, startToggleRules } from "../actions/settings";
+import {
+  startRemoveSetting,
+  startAddSetting,
+  startToggleSpecial,
+  startToggleRules,
+  startAddSearch
+} from "../actions/settings";
 import ToggleButton from "react-toggle-button";
 import Tooltip from 'react-tooltip-lite';
 import Search from "./Search";
@@ -34,8 +40,8 @@ export class Tracker extends React.Component {
     this.props.startToggleRules({ rules: bool, id: this.props.id })
   }
 
-  onSearch = (val) => {
-    console.log(val)
+  onSearch = ({ search }) => {
+    this.props.startAddSearch({ search, id: this.props.id })
   }
 
   render(){
@@ -81,7 +87,8 @@ export class Tracker extends React.Component {
 const mapDispatchToProps = (dispatch,props) => ({
   startRemoveSetting: (id) => dispatch(startRemoveSetting(id)),
   startToggleSpecial: ({ special, id }) => dispatch(startToggleSpecial({ special, id })),
-  startToggleRules: ({ rules, id }) => dispatch(startToggleRules({ rules, id }))
+  startToggleRules: ({ rules, id }) => dispatch(startToggleRules({ rules, id })),
+  startAddSearch: ({ search, id }) => dispatch(startAddSearch({ search, id }))
 })
 
 export default connect(null, mapDispatchToProps)(Tracker);

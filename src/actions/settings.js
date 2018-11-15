@@ -6,7 +6,7 @@ export const addSetting = (setting) => ({
   setting
 });
 
-export const startAddSetting = ({ department = "", description = "", url= "", special=true, rules=false, search="" } = {}) => {
+export const startAddSetting = ({ department = "", description = "", url= "", special=true, rules=false, search=[] } = {}) => {
 if(!!department){
  return (dispatch, getState) => { // Thunk returns an object dispatch and getState!
    const setting = { department, description, url, special, rules, search };
@@ -123,6 +123,7 @@ export const addSearch = ({ search, id }) => ({
 });
 
 export const startAddSearch = ({ search, id }) => {
+  console.log(search, id)
   return (dispatch, getState) => {
     const uid = getState().auth.uid;
     return database.ref(`${uid}/${id}`)
@@ -132,8 +133,6 @@ export const startAddSearch = ({ search, id }) => {
       .then(() => dispatch(addSearch({ search, id })));
   };
 };
-
-
 
 
 

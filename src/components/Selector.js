@@ -14,7 +14,7 @@ class Selector extends React.Component {
       department: selectedOption.value,
       description: selectedOption.description,
       url: selectedOption.url,
-      search: ""
+      search: []
     });
 
     this.setState({ selectedOption: null });

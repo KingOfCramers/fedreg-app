@@ -5,7 +5,6 @@ import Tooltip from "react-tooltip-lite";
 import Toggle from "./Toggle";
 
 import CreatableSelect from 'react-select/lib/Creatable';
-
 const components = {
   DropdownIndicator: null,
 };
@@ -29,8 +28,8 @@ class CreatableInputOnly extends React.Component {
     this.setState({ inputValue });
   };
 
-  handleSearch = ({ value }) => {
-    this.props.onSearch({ value });
+  handleSearch = ({ search }) => {
+    this.props.onSearch({ search });
   }
 
   handleKeyDown = (event: SyntheticKeyboardEvent<HTMLElement>) => {
