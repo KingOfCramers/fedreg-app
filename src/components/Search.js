@@ -47,7 +47,7 @@ class Search extends React.Component {
     const { inputValue } = this.state;
     return (
         <div className="search">
-            <div className="search__title">Search</div>
+            <div className="search__title">Filter</div>
             <Tooltip
               content={this.props.tooltipContent}
               direction="up"

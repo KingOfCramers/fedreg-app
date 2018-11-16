@@ -82,7 +82,7 @@ export class Tracker extends React.Component {
 
   render(){
     return (
-      <div>
+      <div id={this.props.cssId}>
         <div className={`tracker ${(this.state.info || this.state.description) ? "selected" : "unselected"}`}>
         <p className="tracker__title"><a target="_blank" href={this.props.url}>{this.props.department}</a></p>
         <div className="tracker__buttons">
@@ -108,7 +108,7 @@ export class Tracker extends React.Component {
           id={this.props.id} // id of tracker...
           search={this.props.search} // list of search terms ...
           title="Filter"
-          tooltipContent="Search for phrases here to further narrow the results."
+          tooltipContent="Filter out documents with unwanted search terms."
           handleClearSearch={this.onClearSearch}
           handleRemoveSearch={this.onRemoveSearch}
           handleAddSearch={this.onAddSearch}

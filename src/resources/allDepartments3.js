@@ -1,8 +1,24 @@
 const allDepartments = [
     {
-        "value": "Add Group",
-        "label": "Add Group",
-        "group": true
+        "agency_url": "http://www.whitehouse.gov/administration/eop/oa",
+        "child_ids": [
+            317
+        ],
+        "child_slugs": [
+            "national-commission-on-fiscal-responsibility-and-reform"
+        ],
+        "description": "The Office of Administration (OA) was created by Reorganization Plan No. 1 of 1977 and Executive Order 12028. As a component of the Executive Office of the President, the Office's primary function is to provide common administrative and support services for the various agencies and offices of the EOP.\r\n\r\n",
+        "logo": {
+            "thumb_url": "https://s3.amazonaws.com/agency-logos.federalregister.gov/2/thumb.png?1279162074",
+            "small_url": "https://s3.amazonaws.com/agency-logos.federalregister.gov/2/small.png?1279162074",
+            "medium_url": "https://s3.amazonaws.com/agency-logos.federalregister.gov/2/medium.png?1279162074"
+        },
+        "value": "Administration Office, Executive Office of the President",
+        "label": "Administration Office, Executive Office of the President",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=2&order=newest",
+        "short_name": "OA",
+        "url": "https://www.federalregister.gov/agencies/administration-office-executive-office-of-the-president",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/2.json"
     },
     {
         "agency_url": "http://www.acus.gov/",
@@ -20,6 +36,19 @@ const allDepartments = [
         "short_name": "ACUS",
         "url": "https://www.federalregister.gov/agencies/administrative-conference-of-the-united-states",
         "json_url": "https://www.federalregister.gov/api/v1/agencies/566.json"
+    },
+    {
+        "agency_url": "http://www.uscourts.gov/FederalCourts/UnderstandingtheFederalCourts/AdministrativeOffice.aspx",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "Created in 1939, the Administrative Office of the United States Courts (AO) serves the federal Judiciary in carrying out its constitutional mission to provide equal justice under law.\r\n\r\nThe AO is the central support entity for the Judicial Branch. It provides a wide range of administrative, legal, financial, management, program, and information technology services to the federal courts. The AO provides support and staff counsel to the Judicial Conference of the United States and its committees, and implements and executes Judicial Conference policies, as well as applicable federal statutes and regulations. The AO facilitates communications within the Judiciary and with Congress, the Executive Branch, and the public on behalf of the Judiciary.\r\n\r\n\r\n\r\n",
+        "logo": null,
+        "value": "Administrative Office of United States Courts",
+        "label": "Administrative Office of United States Courts",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=3&order=newest",
+        "short_name": "AO",
+        "url": "https://www.federalregister.gov/agencies/administrative-office-of-united-states-courts",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/3.json"
     },
     {
         "agency_url": "http://www.achp.gov/",
@@ -275,6 +304,45 @@ const allDepartments = [
         "json_url": "https://www.federalregister.gov/api/v1/agencies/13.json"
     },
     {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The National Commission on Air Quality was a 13 member Commission created by the 1977 Clean Air Act Amendments. The Commission was required to report to Congress on the effectiveness of that law and on alternative approaches to controlling air pollution, in time for the next Congressional revision of clean air legislation. \r\n\r\nNCAQ was terminated upon submission of its final report on March 3, 1981.\r\n",
+        "logo": null,
+        "value": "Air Quality National Commission",
+        "label": "Air Quality National Commission",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=14&order=newest",
+        "short_name": "NCAQ",
+        "url": "https://www.federalregister.gov/agencies/air-quality-national-commission",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/14.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "On September 22, 2001, President Bush signed into law the Air Transportation Safety and System Stabilization Act (\"Act\") (Public Law 107-42). The Act establishes the Air Transportation Stabilization Board (\"Board\"). The Board may issue up to $10 billion in Federal credit instruments, e.g. (loan guarantees).",
+        "logo": null,
+        "value": "Air Transportation Stabilization Board",
+        "label": "Air Transportation Stabilization Board",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=15&order=newest",
+        "short_name": "ATSB",
+        "url": "https://www.federalregister.gov/agencies/air-transportation-stabilization-board",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/15.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Alaska Power Administration was established by the Secretary of the Interior in 1967. The Administration was abolished and its responsibilities transferred to the Department of Energy by act of August 4, 1977 (91 Stat. 578).",
+        "logo": null,
+        "value": "Alaska Power Administration",
+        "label": "Alaska Power Administration",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=17&order=newest",
+        "short_name": "APA",
+        "url": "https://www.federalregister.gov/agencies/alaska-power-administration",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/17.json"
+    },
+    {
         "agency_url": "http://www.ttb.gov",
         "child_ids": [],
         "child_slugs": [],
@@ -326,6 +394,19 @@ const allDepartments = [
         "json_url": "https://www.federalregister.gov/api/v1/agencies/20.json"
     },
     {
+        "agency_url": "http://govinfo.library.unt.edu/arc/",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Amtrak Reform Council was an independent bipartisan Federal commission established under the Amtrak Reform and Accountability Act of 1997 (P.L. 105-134). The Council consisted of eleven members whose statutory mandate was to make recommendations to Amtrak in order to help it reach operational self-sufficiency, and to report annually to Congress on Amtrak's performance.\r\n\r\nOn February 7, 2002, the Council released to Congress its Action Plan for the Restructuring and Rationalization of the National Intercity Rail Passenger System. The Council, in a vote of nine Council members in favor, one against, and one abstaining (Secretary of Transportation), adopted the Action Plan.",
+        "logo": null,
+        "value": "Amtrak Reform Council",
+        "label": "Amtrak Reform Council",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=21&order=newest",
+        "short_name": "ARC",
+        "url": "https://www.federalregister.gov/agencies/amtrak-reform-council",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/21.json"
+    },
+    {
         "agency_url": "http://www.aphis.usda.gov/",
         "child_ids": [],
         "child_slugs": [],
@@ -350,6 +431,36 @@ const allDepartments = [
         "short_name": "ANTITRUST",
         "url": "https://www.federalregister.gov/agencies/antitrust-division",
         "json_url": "https://www.federalregister.gov/api/v1/agencies/23.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Antitrust Modernization Commission was created pursuant to the Antitrust Modernization Commission Act of 2002 (P.L. 107-273). \r\nThe Commission was charged by statute to examine whether the need exists to modernize the antitrust laws and to identify and study related issues; to solicit views of all parties concerned with the operation of the antitrust laws; to evaluate the advisability of proposals and current arrangements with respect to any issues so identified; and to prepare and submit to Congress and the President a report.\r\nThe Antitrust Modernization Commission submitted its Report and Recommendations to Congress and the President on April 2, 2007. The Antitrust Modernization Commission terminated on May 31, 2007, pursuant to the Antitrust Modernization Commission Act, as amended",
+        "logo": null,
+        "value": "Antitrust Modernization Commission",
+        "label": "Antitrust Modernization Commission",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=24&order=newest",
+        "short_name": "AMC",
+        "url": "https://www.federalregister.gov/agencies/antitrust-modernization-commission",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/24.json"
+    },
+    {
+        "agency_url": "http://www.arc.gov/",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Appalachian Regional Commission (ARC) is a regional economic development agency that represents a partnership of federal, state, and local government. Established by an act of Congress in 1965, ARC is composed of the governors of the 13 Appalachian states and a federal co-chair, who is appointed by the president. Local participation is provided through multi-county local development districts.\r\n\r\nARC funds projects that address the four goals identified in the Commission's strategic plan:\r\n\r\n(1) Increase job opportunities and per capita income in Appalachia to reach parity with the nation. \r\n(2) Strengthen the capacity of the people of Appalachia to compete in the global economy. \r\n(3) Develop and improve Appalachia's infrastructure to make the Region economically competitive. \r\n(4) Build the Appalachian Development Highway System to reduce Appalachia's isolation. \r\n\r\nEach year ARC provides funding for several hundred projects in the Appalachian Region, in areas such as business development, education and job training, telecommunications, infrastructure, community development, housing, and transportation. These projects create thousands of new jobs; improve local water and sewer systems; increase school readiness; expand access to health care; assist local communities with strategic planning; and provide technical and managerial assistance to emerging businesses.",
+        "logo": {
+            "thumb_url": "https://s3.amazonaws.com/agency-logos.federalregister.gov/25/thumb.jpg?1321308918",
+            "small_url": "https://s3.amazonaws.com/agency-logos.federalregister.gov/25/small.jpg?1321308918",
+            "medium_url": "https://s3.amazonaws.com/agency-logos.federalregister.gov/25/medium.jpg?1321308918"
+        },
+        "value": "Appalachian Regional Commission",
+        "label": "Appalachian Regional Commission",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=25&order=newest",
+        "short_name": "ARC",
+        "url": "https://www.federalregister.gov/agencies/appalachian-regional-commission",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/25.json"
     },
     {
         "agency_url": "",
@@ -461,6 +572,23 @@ const allDepartments = [
         "short_name": "USA",
         "url": "https://www.federalregister.gov/agencies/army-department",
         "json_url": "https://www.federalregister.gov/api/v1/agencies/32.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Assassination Records Review Board was an independent federal agency created to oversee the identification and release of records related to the assassination of President John F. Kennedy. \r\nThe Review Board was established by the President John F. Kennedy Assassination Records Collection act of 1992 (PL 102-526), and was signed into law by George Bush. The five members of the Board were appointed by President Clinton, confirmed by the United States Senate, and sworn in on April 11, 1994. \r\nHaving until October 1, 1996 to fulfill its mandate, plus an additional year at the Board's discretion to complete its responsibilities, the Board was terminated in September of 1998 following the issuance of its Final Report. [http://mcadams.posc.mu.edu/arrb/]",
+        "logo": {
+            "thumb_url": "https://s3.amazonaws.com/agency-logos.federalregister.gov/33/thumb.gif?1279161473",
+            "small_url": "https://s3.amazonaws.com/agency-logos.federalregister.gov/33/small.gif?1279161473",
+            "medium_url": "https://s3.amazonaws.com/agency-logos.federalregister.gov/33/medium.gif?1279161473"
+        },
+        "value": "Assassination Records Review Board",
+        "label": "Assassination Records Review Board",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=33&order=newest",
+        "short_name": null,
+        "url": "https://www.federalregister.gov/agencies/assassination-records-review-board",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/33.json"
     },
     {
         "agency_url": "http://www.act.org/goldwater/",
@@ -583,6 +711,19 @@ const allDepartments = [
         "json_url": "https://www.federalregister.gov/api/v1/agencies/42.json"
     },
     {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Census Monitoring Board was established under the Act of Nov. 26, 1997 (111 Stat. 2483)\r\n\r\nThe Board consisted of 8 members, whose duties were to monitor all aspects of the preparation and implementation of the 2000 decennial census (including dress rehearsals and other simulations of a census in preparation therefore). \r\n\r\nThe Board was terminated as provided in the establishing act as of September 30, 2001.",
+        "logo": null,
+        "value": "Census Monitoring Board",
+        "label": "Census Monitoring Board",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=43&order=newest",
+        "short_name": null,
+        "url": "https://www.federalregister.gov/agencies/census-monitoring-board",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/43.json"
+    },
+    {
         "agency_url": "http://www.cdc.gov/",
         "child_ids": [],
         "child_slugs": [],
@@ -675,6 +816,19 @@ const allDepartments = [
         "short_name": "ACF",
         "url": "https://www.federalregister.gov/agencies/children-and-families-administration",
         "json_url": "https://www.federalregister.gov/api/v1/agencies/49.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Christopher Columbus Quincentenary Jubilee Commission was established by the act of August 7, 1984 (98 Stat.1257) and was formed on September 12, 1985. The Commission consisted of 30 members whose mission was to plan, encourage, coordinate and conduct the commemoration of the voyages of Christopher Columbus and to set forth general provisions and policies governing the process of recognition and support of the Quincentenary projects. In accordance with the terms of the act that established it, the Commission was terminated on December 31, 1993 after submitting a comprehensive report to Congress that incorporated the Commission's recommendations for the commemoration.",
+        "logo": null,
+        "value": "Christopher Columbus Quincentenary Jubilee Commission",
+        "label": "Christopher Columbus Quincentenary Jubilee Commission",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=50&order=newest",
+        "short_name": "Christopher Columbus Quincentenary Jubilee Commission",
+        "url": "https://www.federalregister.gov/agencies/christopher-columbus-quincentenary-jubilee-commission",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/50.json"
     },
     {
         "agency_url": "http://www.usccr.gov/",
@@ -797,6 +951,84 @@ const allDepartments = [
         "agency_url": "",
         "child_ids": [],
         "child_slugs": [],
+        "description": "The Commission on Immigration Reform was established by the Immigration Act of 1990 (Pub. L. 101-649) as an independent advisory commission.\r\n\r\nThe Commission was created to review and evaluate the implementation and impact of U.S. immigration policy. Specifically, it focused on how the provisions of the implementing Act impacted family reunification, employment-based immigration, and diversifying the source of immigration, among other things.\r\nThe Commission was terminated December 31, 1997.\r\n",
+        "logo": null,
+        "value": "Commission on Immigration Reform",
+        "label": "Commission on Immigration Reform",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=61&order=newest",
+        "short_name": "CIR",
+        "url": "https://www.federalregister.gov/agencies/commission-on-immigration-reform",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/61.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Commission on Protecting and Reducing Government Secrecy was established under Title IX of the Act of April 30, 1994 (Pub.L. 103-236. \r\n\r\nThe purpose of the Commission was to review and provide comprehensive recommendations for reform designed to reduce the volume of classified information to strengthen the protection of legitimate classified information. \r\n\r\nThe Commission was terminated in 1997 following the submission of its final report to Congress.",
+        "logo": null,
+        "value": "Commission on Protecting and Reducing Government Secrecy",
+        "label": "Commission on Protecting and Reducing Government Secrecy",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=65&order=newest",
+        "short_name": null,
+        "url": "https://www.federalregister.gov/agencies/commission-on-protecting-and-reducing-government-secrecy",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/65.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Commission on Review of Overseas Military Facility Structure of the United States was established as an ad hoc independent presidential advisory Commission by the Act of November 22, 2003 (Pub. L. 108-32).\r\n\r\nAlso known as the Overseas Basing Commission (OSBC), the Commission was created to conduct a comprehensive study of matters relating to the military facility structure overseas.\r\n\r\nThe Commission was terminated in 2005.\r\n",
+        "logo": null,
+        "value": "Commission on Review of Overseas Military Facility Structure of the United States",
+        "label": "Commission on Review of Overseas Military Facility Structure of the United States",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=67&order=newest",
+        "short_name": null,
+        "url": "https://www.federalregister.gov/agencies/commission-on-review-of-overseas-military-facility-structure-of-the-united-states",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/67.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Commission on Structural Alternatives for the Federal Courts of Appeals was established by the Act of Nov. 26, 1997 (Pub. L. 105-119).\r\n\r\nThe Commission was formed to study the structure and alignment of the federal appellate system, with particular focus on the Ninth Circuit. \r\n\r\nThe Commission was terminated March 19, 1999 upon the submission of its final report.\r\n",
+        "logo": null,
+        "value": "Commission on Structural Alternatives for the Federal Courts of Appeals",
+        "label": "Commission on Structural Alternatives for the Federal Courts of Appeals",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=68&order=newest",
+        "short_name": null,
+        "url": "https://www.federalregister.gov/agencies/commission-on-structural-alternatives-for-the-federal-courts-of-appeals",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/68.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Commission on the Advancement of Federal Law Enforcement was established by the Anti-Terrorism and Effective Death Penalty Act of 1996 (Pub. L. 104-132).\r\nThe Commission was created to review and ascertain, evaluate, report and recommend actions to the Congress on a broad spectrum of issues affecting federal law enforcement priorities for the Twenty-First Century.\r\n\r\nThe Commission was terminated following the submission of its final report in February, 2000.\r\n",
+        "logo": null,
+        "value": "Commission on the Advancement of Federal Law Enforcement",
+        "label": "Commission on the Advancement of Federal Law Enforcement",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=69&order=newest",
+        "short_name": null,
+        "url": "https://www.federalregister.gov/agencies/commission-on-the-advancement-of-federal-law-enforcement",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/69.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Commission on the Bicentennial of the United States Constitution was established as an independent advisory commission by an Act of September 29, 1983 (Pub. L. 98-101).\r\n\r\nThe Commission was created to plan and develop appropriate activities to commemorate the bicentennial of the signing of the Constitution, September 17, 1787, the formation of the three branches of government, and the Bill of Rights. \r\nThe Commission was terminated on December 31, 1991.\r\n",
+        "logo": null,
+        "value": "Commission on the Bicentennial of the United States Constitution",
+        "label": "Commission on the Bicentennial of the United States Constitution",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=70&order=newest",
+        "short_name": null,
+        "url": "https://www.federalregister.gov/agencies/commission-on-the-bicentennial-of-the-united-states-constitution",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/70.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
         "description": "The Commission on the Future of the United States Aerospace Industry was established as an independent public advisory commission by the Floyd D. Spence National Defense Authorization Act for Fiscal Year 2001 (Pub. L. 106-398).\r\n\r\nThe Commission was created to conduct a study of issues pertaining to the future of the U.S. aerospace industry in the global economy, particularly as it pertained to national security; and to assess the future importance of the domestic aerospace industry for the economic and national security of the national security of the United States.  \r\n",
         "logo": null,
         "value": "Commission on the Future of the United States Aerospace Industry",
@@ -912,6 +1144,19 @@ const allDepartments = [
         "short_name": null,
         "url": "https://www.federalregister.gov/agencies/community-living-administration",
         "json_url": "https://www.federalregister.gov/api/v1/agencies/587.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Competitiveness Policy Council was established in 1991as an independent  public advisory council by the Omnibus Trade and Competitiveness Act of 1988 (Pub. L. 100-418).\r\n\r\nThe Council was created to develop recommendations for national strategies and on specific policies intended to enhance the productivity and international competitiveness of U.S. industries. During its existence, the Council made a number of important recommendations during its years of operation regarding pensions, education, public investment, trade negotiations, and many other issues.\r\n\r\nThe Council was terminated in  July 1996 after the House of Representatives Appropriations Committee withheld further funding of its operations on the grounds that the Council was \"duplicative of private sector organizations\" that performed the same function without receiveing Federal funding. \r\n\r\n[Source: Wickipedia: http://en.wikipedia.org/wiki/Competitiveness_Policy_Council]",
+        "logo": null,
+        "value": "Competitiveness Policy Council",
+        "label": "Competitiveness Policy Council",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=79&order=newest",
+        "short_name": "CPC",
+        "url": "https://www.federalregister.gov/agencies/competitiveness-policy-council",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/79.json"
     },
     {
         "agency_url": "http://www.occ.treas.gov/",
@@ -1175,6 +1420,19 @@ const allDepartments = [
         "json_url": "https://www.federalregister.gov/api/v1/agencies/97.json"
     },
     {
+        "agency_url": "http://www.brac.gov/",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Defense Base Closure and Realignment Commission was a presidential advisory commission under the Office of the Secretary, Department of Defense.  The Commission was established March 26, 1991 under the authority of the National Defense Authorization Act for Fiscal Year 1991 (Pub. L. 101-510).\r\n\r\nThe Commission was created to readdress charges brought against the process of a prior Defense Secretary’s Commission on Base Realignment and Closure established in 1988. The 1991 Commission reviewed recommendations made by the Secretary of Defense regarding base closures and realignments in 1991, 1993 and 1995.\r\n\r\nThe Commission was terminated December 31, 1995.\r\n",
+        "logo": null,
+        "value": "Defense Base Closure and Realignment Commission",
+        "label": "Defense Base Closure and Realignment Commission",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=99&order=newest",
+        "short_name": "BRAC",
+        "url": "https://www.federalregister.gov/agencies/defense-base-closure-and-realignment-commission",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/99.json"
+    },
+    {
         "agency_url": "http://www.dcaa.mil/",
         "child_ids": [],
         "child_slugs": [],
@@ -1322,6 +1580,19 @@ const allDepartments = [
         "short_name": "DLA",
         "url": "https://www.federalregister.gov/agencies/defense-logistics-agency",
         "json_url": "https://www.federalregister.gov/api/v1/agencies/107.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Defense Mapping Agency (DMA) was established from the Mapping Charting and Geodesy Division, Defense Intelligence Agency (DIA), by DoD Directive 5105.40 of January 1 1972, pursuant to a Presidential directive (press release), November 5, 1971, under authority of the National Security Act of 1947 (61 Stat. 495), July 26, 1947, as amended, initiating the consolidation of mapping functions previously dispersed among the military services. Consolidation effected, and DMA became operational, effective July 1, 1972, pursuant to General Order 3, DMA, on June 16, 1972, which formally transferred specified DOD components to DMA.\r\n\r\nDMA was terminated and its functions were transferred to the National Imagery and Mapping Agency by Pub. L. 104-201 (Sept. 23, 1996) In 2003, NIMA was redesignated as the National Geospatial-Intelligence Agency (NGA).\r\n",
+        "logo": null,
+        "value": "Defense Mapping Agency",
+        "label": "Defense Mapping Agency",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=108&order=newest",
+        "short_name": "DMA",
+        "url": "https://www.federalregister.gov/agencies/defense-mapping-agency",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/108.json"
     },
     {
         "agency_url": "http://www.dnfsb.gov/",
@@ -2591,6 +2862,19 @@ const allDepartments = [
         "json_url": "https://www.federalregister.gov/api/v1/agencies/197.json"
     },
     {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Food and Consumer Service (FCS) was originally named the Food and Nutrition Service as established under Reorganization Plan No. 2 of 1953 by the Secretary of Agriculture. The Food and Nutrition Service was abolished by the Secretary’s Memorandum 1010-1 dated Oct. 20, 1994. The functions of which were assumed by Food and Consumer Service. In 1998, the Food and Consumer Service was again renamed the Food and Nutrition Service as per the regulation published in the Federal Register of Feb. 26, 1998 (63 FR 9721).\r\n\r\nThe duties of the Food and Consumer and Food and Nutrition Services as stated in the US Government Manual were to administer programs (Food Stamp Program, Special Nutrition Programs, Food Distribution Programs, Supplemental Food Programs, Commodity Supplemental Food Programs, and Nutrition, Education and Training Programs) to make food assistance available to people who need it. \r\n\r\nThese programs were operated in cooperation with State and local governments. \r\n\r\nFor further information on the functions, organization, and activities applicable to the current Food and Nutrition Service, please click on the agency description via this site, or visit the FNS webpage at http://www.fns.usda.gov/fns/about.htm.\r\n\r\n__________\r\nSource:\r\nInformation taken from U.S. Government Manual, 1996/97 and 2009/2010 editions",
+        "logo": null,
+        "value": "Food and Consumer Service",
+        "label": "Food and Consumer Service",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=198&order=newest",
+        "short_name": "FCS",
+        "url": "https://www.federalregister.gov/agencies/food-and-consumer-service",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/198.json"
+    },
+    {
         "agency_url": "http://www.fda.gov/",
         "child_ids": [],
         "child_slugs": [],
@@ -3155,6 +3439,19 @@ const allDepartments = [
         "json_url": "https://www.federalregister.gov/api/v1/agencies/237.json"
     },
     {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Office of Indian Trust Transition (OITT) was organized in November 2001 by DOI Secretarial Order 3235 as a temporary office under the Department of the Interior by the authority of  the American Indian Trust Fund Management Reform Act of 1994.\r\n\r\n OITT was created to provide support in DOI’s efforts to reorganize the fiduciary Indian trust functions within the Department into a more efficient, effective and reliable organization. \r\n\r\nIn accordance with the provisions of the establishing Order, the duties and existence of the OITT were terminated and considered obsolete on December 31, 2002.\r\n",
+        "logo": null,
+        "value": "Indian Trust Transition Office",
+        "label": "Indian Trust Transition Office",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=238&order=newest",
+        "short_name": "OITT",
+        "url": "https://www.federalregister.gov/agencies/indian-trust-transition-office",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/238.json"
+    },
+    {
         "agency_url": "http://www.bis.doc.gov/",
         "child_ids": [],
         "child_slugs": [],
@@ -3392,6 +3689,19 @@ const allDepartments = [
         "json_url": "https://www.federalregister.gov/api/v1/agencies/256.json"
     },
     {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The International Development Cooperation Agency (IDCA) was established by Executive Order in September, 1979.\r\n\r\nAs an attempt to reorganize the foreign assistance management structure, the IDCA was envisioned by Senator Hubert Humphrey in 1978,  to coordinate foreign assistance activities as they related to bilateral programs administered by USAID, multilateral programs of international lending institutions then under the purview of the Department of the Treasury, voluntary contributions to United Nations agencies then administered by the Department of State, food programs then administered by USAID, and the activities of OPIC. An International Development Institute would be established within IDCA to address, among other things, private and voluntary organizations and with one of the Institute's constituent parts being the Peace Corps. \r\n\r\nAs established under Reorganization Plan No. 2 of 1979, the only entity it actually coordinated was USAID and, since it was staffed with fewer than 75 people, could make only a marginal impact on overall bilateral and multilateral assistance policy. In the Reagan Administration, no staff were provided to IDCA and, functionally, it faded quickly from the scene. The Executive Order creating IDCA remained intact, however, defining some of the lines of authority in the administration of foreign assistance. Some of the other coordinating functions that had been expected to be exercised by IDCA (but not contained in the Executive Order) were initially exercised instead by USAID, but over time the functions fell into disuse. \r\n\r\nThe IDCA was abolished by act of Oct. 2, 1998 (112 Stat. 2681-790) and its functions transferred to the Department of State, U.S. Agency for International Development, and overseas Private Investment Corporation.\r\n\r\n__________\r\nSources:\r\nU.S. Government Manual, (2009/2010 ed.), p. 612.\r\nhttp://www.usaid.gov/about_usaid/usaidhist.html",
+        "logo": null,
+        "value": "International Development Cooperation Agency",
+        "label": "International Development Cooperation Agency",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=258&order=newest",
+        "short_name": "IDCA",
+        "url": "https://www.federalregister.gov/agencies/international-development-cooperation-agency",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/258.json"
+    },
+    {
         "agency_url": null,
         "child_ids": [],
         "child_slugs": [],
@@ -3463,6 +3773,23 @@ const allDepartments = [
         "short_name": "ITC",
         "url": "https://www.federalregister.gov/agencies/international-trade-commission",
         "json_url": "https://www.federalregister.gov/api/v1/agencies/262.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The ICC, the first regulatory commission in U.S. history, was established as a result of mounting public indignation in the 1880s against railroad malpractices and abuses.\r\n\r\nThe ICC's jurisdiction was gradually extended beyond railroads to all common carriers except airplanes by 1940. Its enforcement powers to set rates were also progressively extended, through statute and broadened Supreme Court interpretations of the commerce clause of the Constitution, as were its investigative powers for determining fair rates of return on which to base rates. In addition, the ICC was given the task of consolidating railroad systems and managing labor disputes in interstate transport. In the 1950s and 60s the ICC enforced U.S. Supreme Court rulings that required the desegregation of passenger terminal facilities.\r\n\r\nThe ICC's safety functions were transferred to the Department of Transportation in 1966. The ICC retained its rate-making and regulatory functions. However, in consonance with the deregulatory movement, the ICC's powers over rates and routes in rails and trucking were curtailed in 1980 by the Staggers Rail Act and Motor Carriers Act. Most ICC control over interstate trucking was abandoned in 1994, and the agency was terminated at the end of 1995. Many of its remaining functions were transferred to the new National Surface Transportation Board.",
+        "logo": {
+            "thumb_url": "https://s3.amazonaws.com/agency-logos.federalregister.gov/543/thumb.jpg?1323295288",
+            "small_url": "https://s3.amazonaws.com/agency-logos.federalregister.gov/543/small.jpg?1323295288",
+            "medium_url": "https://s3.amazonaws.com/agency-logos.federalregister.gov/543/medium.jpg?1323295288"
+        },
+        "value": "Interstate Commerce Commission",
+        "label": "Interstate Commerce Commission",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=543&order=newest",
+        "short_name": "ICC",
+        "url": "https://www.federalregister.gov/agencies/interstate-commerce-commission",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/543.json"
     },
     {
         "agency_url": "http://www.jamesmadison.com/",
@@ -3675,6 +4002,19 @@ const allDepartments = [
         "json_url": "https://www.federalregister.gov/api/v1/agencies/272.json"
     },
     {
+        "agency_url": "http://www.dol.gov/olms/",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Office of Labor-Management Standards (OLMS) can trace its origin back to the passage of the Labor-Management Reporting and Disclosure Act of 1959, as amended (LMRDA) on September 14, 1959. LMRDA was enacted by Congress to ensure certain basic standards of democracy and fiscal responsibility in labor organizations representing employees in private industry. The organization's original name was the Bureau of Labor-Management Reports (BLMR). It was re-named the Labor-Management Services Administration (LMSA) in 1963.\r\n\r\nAt one time or another LMSA had responsibilities which included pension and welfare plans, Federal labor relations, veterans reemployment rights, and an anti-racketeering/organized crime strike force. Through reorganizations and the creation of new agencies through legislation, these functions were subsequently transferred to other Federal agencies.\r\n\r\nWith the passage of the Civil Service Reform Act (CSRA) in 1978, the federal labor relations program was transferred to the newly created Federal Labor Relations Authority. However, the Standard of Conduct provisions of the CSRA which regulate internal affairs of federal-sector unions remained in LMSA. In 1980, the Foreign Service Act (FSA) was passed and unions representing employees of the Department of State and U.S. Information Agency (USIA) became subject to Standards of Conduct requirements.\r\n\r\nThe agency became known as OLMS in 1984. In 1992, OLMS became part of the Employment Standards Administration (ESA). In 1993, OLMS was transferred to the newly created Office of the American Workplace (OAW). In 1996, OAW ceased to exist and OLMS was transferred back to ESA. In 2009, ESA was eliminated and OLMS became an independent agency reporting directly to the Secretary of Labor.\r\n",
+        "logo": null,
+        "value": "Labor-Management Standards Office",
+        "label": "Labor-Management Standards Office",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=274&order=newest",
+        "short_name": "LMSO",
+        "url": "https://www.federalregister.gov/agencies/labor-management-standards-office",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/274.json"
+    },
+    {
         "agency_url": "http://www.blm.gov/",
         "child_ids": [],
         "child_slugs": [],
@@ -3884,6 +4224,19 @@ const allDepartments = [
         "json_url": "https://www.federalregister.gov/api/v1/agencies/289.json"
     },
     {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The United States Bureau of Mines (USBM) was established July 1, 1910, in the Department of the Interior by the organic Act of May 16, 1910, as amended (30 U.S.C. 1, 3, 5-7).\r\n\r\nThe USBM was primarily a research and fact-finding agency. Its goal was to help ensure that the Nation had adequate supplies of nonfuel minerals for security and other needs. Research was conducted to provide the technology for the extraction, processing, use, and recycling of the Nation’s nonfuel mineral resources at a reasonable cost without harm to the environment or the workers involved. \r\n\r\nThe Bureau also collected, compiled, analyzed, and published statistical and economic information on all phases of nonfuel mineral resource development, including exploration, production, shipments, demand, stocks, prices, imports and exports.\r\n\r\nThe United States Bureau of Mines was terminated pursuant to act of Jan. 26, 1996 (110 Stat. 32). Certain functions were transferred to the Secretary of Energy by act of April 26, 1996 (110 Stat. 1321-167).\r\n\r\n__________\r\nSource:\r\nU.S. Government Manual (1992/1993 Edition), p. 359\r\nU.S. Government Manual (2009/2010 Edition), p. 616.\r\n",
+        "logo": null,
+        "value": "Mines Bureau",
+        "label": "Mines Bureau",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=290&order=newest",
+        "short_name": "USBM",
+        "url": "https://www.federalregister.gov/agencies/mines-bureau",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/290.json"
+    },
+    {
         "agency_url": "http://www.mbda.gov/",
         "child_ids": [],
         "child_slugs": [],
@@ -4023,6 +4376,19 @@ const allDepartments = [
         "json_url": "https://www.federalregister.gov/api/v1/agencies/304.json"
     },
     {
+        "agency_url": "http://govinfo.library.unt.edu/nbrc/index.html",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The National Bankruptcy Review Commission NBRC was established as an independent commission on October 6, 1995 under the authority of the Bankruptcy Reform Act of 1994, (Pub. L. No. 103-394).\r\n\r\nThe Commission was created to investigate and study issues relating to the Bankruptcy Code; to solicit divergent views of parties concerned with the operation of the bankruptcy system; to evaluate the advisability of proposals with respect to such issues; and to prepare a report to be submitted to the President, Congress and the Chief Justice. \r\n\r\n Pursuant to the Act, the Commission was terminated on November 20 1997 following the submission of its final report. \r\n",
+        "logo": null,
+        "value": "National Bankruptcy Review Commission",
+        "label": "National Bankruptcy Review Commission",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=305&order=newest",
+        "short_name": "NBRC",
+        "url": "https://www.federalregister.gov/agencies/national-bankruptcy-review-commission",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/305.json"
+    },
+    {
         "agency_url": "",
         "child_ids": [],
         "child_slugs": [],
@@ -4091,6 +4457,19 @@ const allDepartments = [
         "agency_url": "",
         "child_ids": [],
         "child_slugs": [],
+        "description": "THe National Commission on Intermodal Transportation was created by Sec. 5005 of the Intermodal Surface Transportation Efficiency Act of 1991. \r\nThe Commission was established and charged by Congress to make a complete \r\ninvestigation and study of intermodal transportation (specifically, passenger and freight traffic, public and private sectors, and all modes of transportation.) in the United States and internationally. The investigation was to focus on three fundamental tasks: (1) to determine the status of, and problems related to, intermodal transportation today; (2) identify the resources needed to enhance \r\nintermodal transportation; and (3) make recommendations on how to \r\nachieve an efficient intermodal transportation system. \r\n\r\nThe Commission was terminated after submitting its final report in 1994.\r\n\r\nSource: Federal Register Volume 59, Number 58 (Friday, March 25, 1994), FR Doc. 94-7104",
+        "logo": null,
+        "value": "National Commission on Intermodal Transportation",
+        "label": "National Commission on Intermodal Transportation",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=318&order=newest",
+        "short_name": null,
+        "url": "https://www.federalregister.gov/agencies/national-commission-on-intermodal-transportation",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/318.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
         "description": "The National Commission on Libraries and Information Science was established as an independent commission within the Executive branch by the National Commission on Libraries and Information Science Act (Pub. L. 91-345) on July 20, 1970.\r\n\r\nThe role of the Commission is to advise the President and Congress on matters relating to library and information policies and plans. It is responsible for developing or recommending overall plans for the provision of library and information services adequate to meet the needs of the people of the United States.\r\n",
         "logo": null,
         "value": "National Commission on Libraries and Information Science",
@@ -4099,6 +4478,19 @@ const allDepartments = [
         "short_name": "NCLIS",
         "url": "https://www.federalregister.gov/agencies/national-commission-on-libraries-and-information-science",
         "json_url": "https://www.federalregister.gov/api/v1/agencies/320.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The National Commission on Manufactured Housing was established on November 28, 1990 as an independent commission pursuant to Section 943 of the Cranston-Gonzales National Affordable  Housing Act of 1990 (Pub. L. 101-625). \r\n\r\nThe Commission was created to develop recommendations for modernizing the National Manufactured Housing Construction and Safety Standards Act of 1974. It assessed the effectiveness of the Act and developed an action plan containing specific recommendations for legislative and regulatory revision to the present law.\r\n\r\nThe Commission was terminated upon the submission of its final report.\r\n",
+        "logo": null,
+        "value": "National Commission on Manufactured Housing",
+        "label": "National Commission on Manufactured Housing",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=321&order=newest",
+        "short_name": null,
+        "url": "https://www.federalregister.gov/agencies/national-commission-on-manufactured-housing",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/321.json"
     },
     {
         "agency_url": "http://www.inspire2serve.gov/",
@@ -4116,6 +4508,32 @@ const allDepartments = [
         "short_name": "NCMNPS",
         "url": "https://www.federalregister.gov/agencies/national-commission-on-military-national-and-public-service",
         "json_url": "https://www.federalregister.gov/api/v1/agencies/594.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The National Commission on Terrorist Attacks Upon the United States was established as an independent, bipartisan commission of the legislative branch of the federal government by Title VI of PL 107-306, the Intelligence Authorization Act for Fiscal Year 2003 of November 27, 2002, as amended by PL 108-207 of January 20, 2004\r\n\r\nThe Commission was created to examine evidence developed by all relevant government agencies regarding the facts and causes of the terrorist attacks of September 11, 2001, occurring at the World Trade Center in New York, in Somerset County, Pennsylvania, and the Pentagon in Virginia. The Commission reviewed the findings and recommendations of the Joint Inquiry of the Select Committee on Intelligence of the Senate, the Permanent Select Committee on Intelligence of the House, and other executive branch, congressional or independent commission investigations regarding the September 11, 2001 attacks.\r\n\r\nThe Commission was terminated August 24, 2004 after submitting its final report.\r\n\r\nSource: The Encyclopedia of Governmental Advisory Organizations (EGAO 6560, p. 981)\r\n",
+        "logo": null,
+        "value": "National Commission on Terrorist Attacks Upon the United States",
+        "label": "National Commission on Terrorist Attacks Upon the United States",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=325&order=newest",
+        "short_name": "9-11 Commission",
+        "url": "https://www.federalregister.gov/agencies/national-commission-on-terrorist-attacks-upon-the-united-states",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/325.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "National Commission on the Cost of Higher Education was established as a public advisory commission under the Department of Education by Title IV of the Cost of Higher Education Review (PL 105-18) of June 12, 1997.\r\n\r\nThe Commission was created to examine the costs of higher education. According to the Final Report issued by the Commission on January 21, 1998, the Commission was created to examine eleven specific factors related to the costs of higher education. These factors included: \r\n1. The increase in tuition compared with other commodities and services.\r\n2. Innovative methods of reducing or stabilizing tuition.\r\n3. Trends in college and university administrative costs, including administrative staffing, ratio of administrative staff to instructors, ratio of administrative staff to students, remuneration of administrative staff, and remuneration of college and university presidents and chancellors.\r\n4. Trends in faculty workload and remuneration (including the use of adjunct faculty); faculty-to-student ratios; number of hours spent in the classroom by faculty; and tenure practices, and the impact of such trends on tuition.\r\n5. Trends in the construction and renovation of academic and other collegiate facilities, the modernization of facilities to access and utilize new technologies, and the impact of such trends on tuition.\r\n6. The extent to which increases in institutional financial aid and tuition discounting have effected tuition increases, including the demographics of students receiving such aid, the extent to which such aid is provided to students with limited need in order to attract such students to particular institutions or major fields of study, and the extent to which Federal financial aid, including loan aid, has been used to offset such increases.\r\n7. The extent to which Federal, state and local laws, regulations or other mandates contribute to increasing tuition, and recommendations on reducing those mandates.\r\n8. The establishment of a mechanism for a more timely and widespread distribution of data on tuition trends and other costs of operating colleges and universities.\r\n9. The extent to which student financial aid programs have contributed to changes in tuition.\r\n10. Trends in state fiscal policies that have affected college costs.\r\n11. The adequacy of existing Federal and state financial aid programs in meeting the costs of attending colleges and universities.\r\n\r\nFollowing the publication of its final report, the Commission was terminated in September 1999. \r\n\r\nSource: http://www.nyu.edu/classes/jepsen/costreport.html\r\n",
+        "logo": null,
+        "value": "National Commission on the Cost of Higher Education",
+        "label": "National Commission on the Cost of Higher Education",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=326&order=newest",
+        "short_name": null,
+        "url": "https://www.federalregister.gov/agencies/national-commission-on-the-cost-of-higher-education",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/326.json"
     },
     {
         "agency_url": "http://www.ncs.gov/",
@@ -4225,6 +4643,19 @@ const allDepartments = [
         "json_url": "https://www.federalregister.gov/api/v1/agencies/340.json"
     },
     {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The National Education Goals Panel was established as an independent Presidential advisory panel by a Joint Statement between President Bush and the nation’s governors on July 31, 1990 and became a fully independent federal agency in 1994.\r\n\r\nThe Panel was created to set education goals for the nation by the year 2000. They supported system-wide reform by reporting on national and state progress toward the goals over a 10-year period, working to establish a system of high academic standards and assessments, identifying promising practices for improving education, and building a nationwide, bipartisan consensus to achieve the goals. The Panel responsibilities supported system-wide reform including: the reporting on national\r\n\r\nThe Panel was terminated in April 2002.\r\n\r\nSource: The Encyclopedia of Governmental Advisory Organizations (EGAO 2228, p.320)\r\n",
+        "logo": null,
+        "value": "National Education Goals Panel",
+        "label": "National Education Goals Panel",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=341&order=newest",
+        "short_name": "NEGP",
+        "url": "https://www.federalregister.gov/agencies/national-education-goals-panel",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/341.json"
+    },
+    {
         "agency_url": "http://arts.gov/",
         "child_ids": [],
         "child_slugs": [],
@@ -4276,6 +4707,19 @@ const allDepartments = [
         "short_name": "ARTS",
         "url": "https://www.federalregister.gov/agencies/national-foundation-on-the-arts-and-the-humanities",
         "json_url": "https://www.federalregister.gov/api/v1/agencies/342.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The National Gambling Impact Study Commission was established as an independent public advisory commission under authority of PL 104-169 on August 3, 1996.\r\n\r\nThe Commission studied the social and economic impacts of gambling in the United States.\r\n\r\nThe Commission was terminated after submitting its final report in June 1999\r\n\r\nSource: The Encyclopedia of Governmental Advisory Organizations (EGAO 2344, p.336)\r\n",
+        "logo": null,
+        "value": "National Gambling Impact Study Commission",
+        "label": "National Gambling Impact Study Commission",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=343&order=newest",
+        "short_name": null,
+        "url": "https://www.federalregister.gov/agencies/national-gambling-impact-study-commission",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/343.json"
     },
     {
         "agency_url": "https://www1.nga.mil/",
@@ -4543,6 +4987,19 @@ const allDepartments = [
         "short_name": "NPR",
         "url": "https://www.federalregister.gov/agencies/national-partnership-for-reinventing-government",
         "json_url": "https://www.federalregister.gov/api/v1/agencies/363.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The National Prison Rape Elimination Commission (NPREC) was established in 2003 as a bipartisan commission under the authority of the Prison Rape Elimination Act.\r\n\r\nThe Commission was created to study Federal, State and local government policies and practices related to the prevention, detection, response and monitoring of sexual abuse in correction and detention facilities in the United States. Consistent with the Act, the Commission made recommendations designed to make the prevention of rape a top priority in America’s jails, prisons, lockups, juvenile facilities, and other detention facilities. \r\n\r\nThe Commission was terminated on August 22, 2009 after submitting its final report in June 2009.\r\n",
+        "logo": null,
+        "value": "National Prison Rape Elimination Commission",
+        "label": "National Prison Rape Elimination Commission",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=364&order=newest",
+        "short_name": "NPREC",
+        "url": "https://www.federalregister.gov/agencies/national-prison-rape-elimination-commission",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/364.json"
     },
     {
         "agency_url": null,
@@ -5028,6 +5485,19 @@ const allDepartments = [
         "json_url": "https://www.federalregister.gov/api/v1/agencies/399.json"
     },
     {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Panama Canal Commission was established by Pub. Law 96-70 (the Panama Canal Act of 1979) and began operations on October 1, 1979.\r\n\r\nThe Commission functioned as an independent agency with the primary purposed of operating and maintaining the Panama Canal and associated facilities in cooperation with the Republic of Panama. On December 31, 1999, the Commission’s duties and sovereignty over the canal were transferred to the Republic of Panama, upon the termination of the Panama Canal Treaty of 1977.\r\n",
+        "logo": null,
+        "value": "Panama Canal Commission",
+        "label": "Panama Canal Commission",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=400&order=newest",
+        "short_name": null,
+        "url": "https://www.federalregister.gov/agencies/panama-canal-commission",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/400.json"
+    },
+    {
         "agency_url": null,
         "child_ids": [],
         "child_slugs": [],
@@ -5194,6 +5664,32 @@ const allDepartments = [
         "agency_url": "",
         "child_ids": [],
         "child_slugs": [],
+        "description": "The Presidents Council on Integrity and Efficiency (PCIE) was established by EO 12625 of January 27, 1988 (53 FR 2812). The PCIE was primarily composed of the Presidentially appointed Inspector Generals. The Council was chaired by the Deputy Director for Management of the Office of Management and Budget (OMB). \r\n\r\nThe PCIE conducted interagency audit, inspection, evaluation, and investigative projects  to address integrity, economy, and effectiveness issues that transcend individual government agencies. The Council also had the additional role of increasing the professionalism and effectiveness of Inspector General personnel throughout the government.\r\n\r\nThe PCIE was abolished and reestablished by EO 12805 of May 11, 1992 (57 FR 20627).\r\n\r\n__________\r\nSource:\r\nhttp://www.oig.doc.gov/oig/reports/other_publications/TravelCardGuide.pdf\r\nU.S. Government Manual (2009/2010 ed.), p. 611.\r\n",
+        "logo": null,
+        "value": "President's Council on Integrity and Efficiency",
+        "label": "President's Council on Integrity and Efficiency",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=428&order=newest",
+        "short_name": "PCIE",
+        "url": "https://www.federalregister.gov/agencies/president-s-council-on-integrity-and-efficiency",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/428.json"
+    },
+    {
+        "agency_url": null,
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The President's Council on Sustainable Development was established by Executive Order 12852 of June 29, 1993. The Council was made up of not more than 25 members from the public and private sectors who represented industrial, environmental, governmental and not-for-profit organizations with experience relating to matters of sustainable development.\r\rThe Council's functions were to advise the President on matters involving sustainable development and to develop and recommend to the President a national sustainable development action strategy that will foster economic vitality.\r\rThe Council was terminated by Executive Order 23238 of September 30, 1999.",
+        "logo": null,
+        "value": "President's Council on Sustainable Development",
+        "label": "President's Council on Sustainable Development",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=429&order=newest",
+        "short_name": "PCSD",
+        "url": "https://www.federalregister.gov/agencies/president-s-council-on-sustainable-development",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/429.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
         "description": "The President's Critical Infrastructure Protection Board was established by Executive Order 13231 of October 16, 2001. The purpose of the Board was to assist and support the Director of OMB in this function and shall be reasonably cognizant of programs related to security of department and agency information systems. The Board was also authorized to recommend policies and coordinate programs for protecting information systems for critical infrastructure, including emergency preparedness communications, and the physical assets that support such systems.",
         "logo": null,
         "value": "President's Critical Infrastructure Protection Board",
@@ -5215,6 +5711,32 @@ const allDepartments = [
         "short_name": "PERAB",
         "url": "https://www.federalregister.gov/agencies/president-s-economic-policy-advisory-board",
         "json_url": "https://www.federalregister.gov/api/v1/agencies/431.json"
+    },
+    {
+        "agency_url": null,
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Presidential Advisory Committee on Gulf War Veterans' Illnesses was established by EO 12961 of May 26, 1995. The purpose of the Advisory Committee was the oversight of the ongoing investigation being conducted by the Department of Defense and ther executive departments and agencies into possible chemical or biological warfare agent exposures during the Gulf War. The Advisory Committee was also charged with the evaluation of the Federal Government's plan for and progress toward the implementation of those recommendations made in its report submitted on December 31, 1996. \rThe Presidential Advisory Committee on Gulf War Veterans' Illnesses was terminated upon the issuance of its special report of October 31, 1997.",
+        "logo": null,
+        "value": "Presidential Advisory Committee on Gulf War Veterans' Illnesses",
+        "label": "Presidential Advisory Committee on Gulf War Veterans' Illnesses",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=412&order=newest",
+        "short_name": null,
+        "url": "https://www.federalregister.gov/agencies/presidential-advisory-committee-on-gulf-war-veterans-illnesses",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/412.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Presidential Commission on Assignment of Women in the Armed Forces was established in 1992 by the Defense Authorization Bill for 1992 [Pub. L. 102-190).\r\nThe Commission was created to assess the laws and policies restricting the assignment of female service members. \r\n\r\nThe Commission was terminated following the submission of its final report to Congress on December 15, 1992. \r\n",
+        "logo": null,
+        "value": "Presidential Commission on Assignment of Women in the Armed Forces",
+        "label": "Presidential Commission on Assignment of Women in the Armed Forces",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=413&order=newest",
+        "short_name": null,
+        "url": "https://www.federalregister.gov/agencies/presidential-commission-on-assignment-of-women-in-the-armed-forces",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/413.json"
     },
     {
         "agency_url": null,
@@ -5439,6 +5961,32 @@ const allDepartments = [
         "short_name": "RITA",
         "url": "https://www.federalregister.gov/agencies/research-and-innovative-technology-administration",
         "json_url": "https://www.federalregister.gov/api/v1/agencies/450.json"
+    },
+    {
+        "agency_url": null,
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Research and Special Programs Administration (RSPA) was established by act of Oct. 24, 1992 (106 Stat. 3310). This subagency of the Department of Transportation focused on improving hazardous materials and pipeline safety; coordinates and advances transportation research, technology and education activities to promote innovative transportation solutions; and manages the Department's transportation-related emergency response and recovery responsibilities. RSPA also provides planning and training grants to States and Indian tribes to increase hazardous materials emergency preparedness. \r\rRSPA was abolished by act of Nov. 30, 2004 (118 Stat. 2424-2426) and certain duties and powers were transferred to both the Pipeline Hazardous Materials Safety Administration and the Administrator of the Research and Innovative Technology Administration, Department of Transportation.",
+        "logo": null,
+        "value": "Research and Special Programs Administration",
+        "label": "Research and Special Programs Administration",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=451&order=newest",
+        "short_name": "RSPA",
+        "url": "https://www.federalregister.gov/agencies/research-and-special-programs-administration",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/451.json"
+    },
+    {
+        "agency_url": null,
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The Resolution Trust Corporation was established on August 9, 1989, by the Financial Institutions Reform, Recovery, and Enforcement Act of1989 (12 U.S.C. 1441a). The duties of the Corporation were:\r\r(1) the managing and resolving all cases involving depository institutions, the accounts of which were insured by the former Federal Savings and Loan Insurance Corporation prior to August 9, 1989;\r(2) conducting the operations of the Corporation in such a way as to maximize the return of value from the sale or other disposition of depository institutions or their assets, while minimizing the impact on real estate and financial markets and minimize losses to the Government; and\r(3) maximizing the availability and affordability of residential real property for low- and moderate-income individuals.\r\rThe Resolution Trust Corporation was abolished by act of Dec. 12, 1991 (105 Stat. 1769). Corporation functions terminated pursuant to act of Dec. 17, 1993. (107 Stat. 2369).",
+        "logo": null,
+        "value": "Resolution Trust Corporation",
+        "label": "Resolution Trust Corporation",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=452&order=newest",
+        "short_name": "RTC",
+        "url": "https://www.federalregister.gov/agencies/resolution-trust-corporation",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/452.json"
     },
     {
         "agency_url": "",
@@ -5835,6 +6383,19 @@ const allDepartments = [
         "agency_url": "",
         "child_ids": [],
         "child_slugs": [],
+        "description": "The Technology Administration was established by act of October 24, 1988 (102 Stat. 2593). \r\n\r\nThe role of the Technology Administration was to assist businesses to develop technology that would increase their competitiveness in the marketplace. It identified and attempted to remove governmental barriers to the commercialization of U.S. science and technology; helped to identify priority technologies; monitored foreign competitors' progress in technology; advised the president on issues concerning commercial technology and related policy; and promoted joint efforts among business, government, educational institutions, and nonprofit organizations. The office also managed the National Medal of Technology Program, the president's highest technology award.\r\n\r\nThe Technology Administration operated the National Technical Information Service (NTIS), which collected and distributed scientific and technical information generated by the U.S. government and foreign sources.\r\n\r\nIn 2007 the Technology Administration was abolished by act of August 9, 2007 (121 Stat. 587) Functions of the TA were absorbed into the National Institute of Standards and Technology.\r\n",
+        "logo": null,
+        "value": "Technology Administration",
+        "label": "Technology Administration",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=484&order=newest",
+        "short_name": "TA",
+        "url": "https://www.federalregister.gov/agencies/technology-administration",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/484.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
         "description": "The Tennessee Valley Authority conducts a unified program of resource development for the advancement of economic growth in the Tennessee Valley region.\r\rThe Tennessee Valley Authority (TVA) is a wholly owned Government corporation created by act of May 18, 1933 (16 U.S.C. 831-831dd). All functions of the Authority are vested in its nine-member Board of Directors, the members of which are appointed by the President with the advice and consent of the Senate. The Board designates one member as Chairman.",
         "logo": {
             "thumb_url": "https://s3.amazonaws.com/agency-logos.federalregister.gov/486/thumb.png?1279151566",
@@ -5860,6 +6421,19 @@ const allDepartments = [
         "short_name": null,
         "url": "https://www.federalregister.gov/agencies/the-white-house-office",
         "json_url": "https://www.federalregister.gov/api/v1/agencies/487.json"
+    },
+    {
+        "agency_url": null,
+        "child_ids": [],
+        "child_slugs": [],
+        "description": " Thrift Depositor Protection Oversight Board was originally established by Act of August 9, 1989 as the Oversight Board for the Resolution Trust Corporation. \r\rUnder the general supervision of the Oversight Board, the Resolution Trust Corporation managed and resolved failed savings associations that were insured by the Federal Savings and Loan Insurance Corporation before the enactment of the Financial Institutions Reform, Recovery, and Enforcement Act of 1989. \r\rThe name was changed to the Thrift Depositor Protection Oversight Board by act of Dec. 12, 1991. The Board was abolished by act of July 29, 1998 and its authority and duties were transferred to the Secretary of the Treasury Department.",
+        "logo": null,
+        "value": "Thrift Depositor Protection Oversight Board",
+        "label": "Thrift Depositor Protection Oversight Board",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=488&order=newest",
+        "short_name": "TDPOB",
+        "url": "https://www.federalregister.gov/agencies/thrift-depositor-protection-oversight-board",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/488.json"
     },
     {
         "agency_url": "",
@@ -6199,6 +6773,19 @@ const allDepartments = [
         "short_name": "USEC",
         "url": "https://www.federalregister.gov/agencies/united-states-enrichment-corporation",
         "json_url": "https://www.federalregister.gov/api/v1/agencies/509.json"
+    },
+    {
+        "agency_url": "",
+        "child_ids": [],
+        "child_slugs": [],
+        "description": "The United States Information Agency (USIA) was established August 1953. In April 1978, the agency name was temporarily changed to the International Communication Agency (USICA), when its functions were consolidated with those of the Bureau of Educational and Cultural Affairs of the Department of State. The name was restored to USIA however in August of 1982.\r\n\r\nUSIA’s basic legislative mandates are the Smith-Mundt Act of 1948 and the Fulbright-Hays Act of 1961. The International Broadcasting Act of 1994 reorganized and consolidated all non-military U.S. government international broadcasting into USIA, supervised by the Broadcasting Board of Governors. \r\nUntil 1999, the USIA functioned as an independent foreign affairs agency within the executive branch of the U.S. government. USIA explained and supported American foreign policy and promoted U.S. national interests through a wide range of overseas information programs. The agency also promoted mutual understanding between the United States and other nations by conducting educational and cultural activities.\r\n\r\nPursuant to the Foreign Affairs Reform and Restructuring Act of 1998, USIA was integrated into the Department of State on October 1, 1999. \r\n",
+        "logo": null,
+        "value": "United States Information Agency",
+        "label": "United States Information Agency",
+        "recent_articles_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bagency_ids%5D%5B%5D=510&order=newest",
+        "short_name": "USIA",
+        "url": "https://www.federalregister.gov/agencies/united-states-information-agency",
+        "json_url": "https://www.federalregister.gov/api/v1/agencies/510.json"
     },
     {
         "agency_url": "",
