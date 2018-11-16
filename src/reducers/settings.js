@@ -41,9 +41,18 @@ const settingsReducer = (state = settingsReducerDefaultState, action) => {
             return setting; // and return new settings...
           } else { // If no settings...
             setting.search = {};
-            setting.search[action.searchId] = action.search;
-            return setting;
+            setting.search[action.searchId] = action.search; // append  this...
+            return setting; // and return new settings...
           }
+        } else {
+          return setting;
+        }
+      })
+    case "REMOVE_SEARCH" :
+      return state.map(setting => {
+        if(setting.id === action.id){
+          delete setting.search[action.searchId];
+          return setting;
         } else {
           return setting;
         }

@@ -5,6 +5,7 @@ import Tooltip from "react-tooltip-lite";
 import Toggle from "./Toggle";
 
 import CreatableSelect from 'react-select/lib/Creatable';
+
 const components = {
   DropdownIndicator: null,
 };
@@ -15,10 +16,17 @@ const createOption = (label: string) => ({
 });
 
 class CreatableInputOnly extends React.Component {
-  state = {
-    inputValue: '',
-    value: []
-  };
+  constructor(props){
+    super(props);
+    let options = [];
+    for (var x in props.vals){
+      options.push({ value: props.vals[x], label: props.vals[x] });
+    };
+    this.state = {
+      inputValue: '',
+      value: options
+    };
+  }
 
   handleChange = (value: any, actionMeta: any) => {
     this.setState({ value });
@@ -28,8 +36,12 @@ class CreatableInputOnly extends React.Component {
     this.setState({ inputValue });
   };
 
-  handleSearch = ({ search }) => {
-    this.props.onSearch({ search });
+  handleSearch = ({ value, inputValue }) => {
+    this.setState({
+      inputValue: '',
+      value: [...value, createOption(inputValue)], // Eventually like to take this out...
+    });
+    this.props.onSearch({ inputValue });
   }
 
   handleKeyDown = (event: SyntheticKeyboardEvent<HTMLElement>) => {
@@ -38,11 +50,10 @@ class CreatableInputOnly extends React.Component {
     switch (event.key) {
       case 'Enter':
       case 'Tab':
-        this.setState({
-          inputValue: '',
-          value: [...value, createOption(inputValue)],
+        this.handleSearch({
+          value,
+          inputValue
         });
-        this.handleSearch({ search: inputValue });
         event.preventDefault();
     }
   };
@@ -64,10 +75,10 @@ class CreatableInputOnly extends React.Component {
                 className={"tags"}
                 components={components}
                 inputValue={inputValue}
-                isClearable
                 isMulti
                 menuIsOpen={false}
                 onChange={this.handleChange}
+                onClear={()=> console.log("YAH")}
                 onInputChange={this.handleInputChange}
                 onKeyDown={this.handleKeyDown}
                 placeholder="Add filters here..."
@@ -79,46 +90,4 @@ class CreatableInputOnly extends React.Component {
   }
 }
 
-const mapStateToProps = (state,props) => ({
-  settings: state.settings
-});
-
-module.exports = connect(mapStateToProps, null)(CreatableInputOnly);
-/*
-class Search extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      search: ""
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-  };
-
-  handleChange(event) {
-    this.setState({search: event.target.value });
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
-    this.props.startAddSearch({search: this.state.search, id: this.props.id });
-  }
-
-  render(){
-    return (
-      <form className="search" onSubmit={this.handleSubmit}>
-        <div className="form-group">
-          <label>Filter</label>
-          <input name="search" onChange={this.handleChange} value={this.state.search} disabled={this.props.disabled} />
-        </div>
-      </form>
-    );
-  }
-}
-
-const mapDispatchToProps = (dispatch,props) => ({
-  startAddSearch: ({ search, id }) => dispatch(startAddSearch({ search, id }))
-});
-
-
-module.exports = connect(null, mapDispatchToProps)(Search);*/
+module.exports = CreatableInputOnly;

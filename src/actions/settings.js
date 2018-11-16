@@ -6,10 +6,10 @@ export const addSetting = (setting) => ({
   setting
 });
 
-export const startAddSetting = ({ department = "", description = "", url= "", special=true, rules=false } = {}) => {
+export const startAddSetting = ({ department = "", description = "", url= "", special=true, rules=false, search={}} = {}) => {
 if(!!department){
  return (dispatch, getState) => { // Thunk returns an object dispatch and getState!
-   const setting = { department, description, url, special, rules };
+   const setting = { department, description, url, special, rules, search };
    const uid = getState().auth.uid; // Access to the user id!
     const data = [];
     database.ref(`${uid}/`).once("value")
@@ -118,15 +118,15 @@ export const startClearSettings = () => {
 
 export const addSearch = ({ search, id, searchId }) => ({
   type: "ADD_SEARCH",
-  search,
   id,
-  searchId
+  searchId,
+  search
 });
 
-export const startAddSearch = ({ search, id, searchId }) => {
+export const startAddSearch = ({ search, id }) => {
   return (dispatch, getState) => {
     const uid = getState().auth.uid;
-    return database.ref(`${uid}/${id}/search`)
+    return database.ref(`${uid}/${id}/search/`)
       .push(search)
       .then((ref) => dispatch(addSearch({
         id,
@@ -136,7 +136,29 @@ export const startAddSearch = ({ search, id, searchId }) => {
   };
 };
 
+export const removeSearch = ({ id, searchId }) => ({
+  type: "REMOVE_SEARCH",
+  id,
+  searchId
+})
 
+export const startRemoveSearch = ({ search, id, searchId }) => {
+  return (dispatch, getState) => {
+    console.log(searchId)
+    const uid = getState().auth.uid;
+    return database.ref(`${uid}/${id}/search/${searchId}`)
+      .remove()
+      .then(() => dispatch(removeSearch({
+        id,
+        searchId
+      })));
+  };
+};
+/*
+-LRP4syrI5qtnkKteHka
+-LRP4uEmh2tppOUjmbir
+
+*/
 
 
 

@@ -51,8 +51,9 @@ export class Tracker extends React.Component {
     this.props.startToggleRules({ rules: bool, id: this.props.id })
   }
 
-  onSearch = ({ search }) => {
-    this.props.startAddSearch({ search, id: this.props.id })
+  onSearch = ({ inputValue }) => {
+    console.log({ search: inputValue, id: this.props.id });
+    this.props.startAddSearch({ search: inputValue, id: this.props.id })
   }
 
   handleOpenModal() {
@@ -90,9 +91,9 @@ export class Tracker extends React.Component {
         />
         <Search
           id={this.props.id}
+          vals={this.state.search}
           title="Filter"
           tooltipContent="Search for phrases here to further narrow the results."
-          search={["boy", "bag"]}
           onSearch={this.onSearch}
         />
       </div>
