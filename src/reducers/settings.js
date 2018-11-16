@@ -57,6 +57,15 @@ const settingsReducer = (state = settingsReducerDefaultState, action) => {
           return setting;
         }
       })
+    case "CLEAR_SEARCH" :
+      return state.map(setting => {
+        if(setting.id === action.id){
+          delete setting.search;
+          return setting;
+        } else {
+          return setting;
+        }
+      });
     case "CLEAR_SETTINGS":
       return settingsReducerDefaultState;
     default:

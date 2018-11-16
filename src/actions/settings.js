@@ -6,7 +6,7 @@ export const addSetting = (setting) => ({
   setting
 });
 
-export const startAddSetting = ({ department = "", description = "", url= "", special=true, rules=false, search={}} = {}) => {
+export const startAddSetting = ({ department = "", description = "", url= "", special=true, rules=false, search=[]} = {}) => {
 if(!!department){
  return (dispatch, getState) => { // Thunk returns an object dispatch and getState!
    const setting = { department, description, url, special, rules, search };
@@ -144,7 +144,6 @@ export const removeSearch = ({ id, searchId }) => ({
 
 export const startRemoveSearch = ({ search, id, searchId }) => {
   return (dispatch, getState) => {
-    console.log(searchId)
     const uid = getState().auth.uid;
     return database.ref(`${uid}/${id}/search/${searchId}`)
       .remove()
@@ -154,11 +153,18 @@ export const startRemoveSearch = ({ search, id, searchId }) => {
       })));
   };
 };
-/*
--LRP4syrI5qtnkKteHka
--LRP4uEmh2tppOUjmbir
 
-*/
 
+export const clearSearch = () => ({
+  type: "CLEAR_Search"
+});
+
+export const startClearSearch = ({ id }) => {
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`${uid}/${id}/search`).remove()
+      .then(() => dispatch(clearSearch()));
+  };
+};
 
 

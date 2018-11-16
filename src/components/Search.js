@@ -15,12 +15,12 @@ const createOption = (label: string) => ({
   value: label,
 });
 
-class CreatableInputOnly extends React.Component {
+class Search extends React.Component {
   constructor(props){
     super(props);
     let options = [];
-    for (var x in props.vals){
-      options.push({ value: props.vals[x], label: props.vals[x] });
+     for (var x in this.props.vals){
+       options.push({ value: props.vals[x], label: props.vals[x], searchId: x });
     };
     this.state = {
       inputValue: '',
@@ -29,7 +29,11 @@ class CreatableInputOnly extends React.Component {
   }
 
   handleChange = (value: any, actionMeta: any) => {
-    this.setState({ value });
+    if(actionMeta.action == "remove-value"){
+      this.props.onRemoveSearch({ searchId: actionMeta.removedValue.searchId })
+    } else if (actionMeta.action == "clear"){
+      this.props.onClearSearch();
+    }
   };
 
   handleInputChange = (inputValue: string) => {
@@ -78,7 +82,6 @@ class CreatableInputOnly extends React.Component {
                 isMulti
                 menuIsOpen={false}
                 onChange={this.handleChange}
-                onClear={()=> console.log("YAH")}
                 onInputChange={this.handleInputChange}
                 onKeyDown={this.handleKeyDown}
                 placeholder="Add filters here..."
@@ -90,4 +93,4 @@ class CreatableInputOnly extends React.Component {
   }
 }
 
-module.exports = CreatableInputOnly;
+module.exports = Search;

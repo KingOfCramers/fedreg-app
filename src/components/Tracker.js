@@ -10,7 +10,9 @@ import {
   startAddSetting,
   startToggleSpecial,
   startToggleRules,
-  startAddSearch
+  startAddSearch,
+  startRemoveSearch,
+  startClearSearch
 } from "../actions/settings";
 import Search from "./Search";
 import Toggle from "./Toggle";
@@ -52,8 +54,15 @@ export class Tracker extends React.Component {
   }
 
   onSearch = ({ inputValue }) => {
-    console.log({ search: inputValue, id: this.props.id });
     this.props.startAddSearch({ search: inputValue, id: this.props.id })
+  }
+
+  onRemoveSearch = ({ searchId }) => {
+    this.props.startRemoveSearch({ searchId, id: this.props.id });
+  }
+
+  onClearSearch = () => {
+    this.props.startClearSearch({ id: this.props.id });
   }
 
   handleOpenModal() {
@@ -95,6 +104,8 @@ export class Tracker extends React.Component {
           title="Filter"
           tooltipContent="Search for phrases here to further narrow the results."
           onSearch={this.onSearch}
+          onRemoveSearch={this.onRemoveSearch}
+          onClearSearch={this.onClearSearch}
         />
       </div>
       <div className={`${this.state.description ? "showing" : "collapsed"}`}>
@@ -116,7 +127,9 @@ const mapDispatchToProps = (dispatch,props) => ({
   startRemoveSetting: (id) => dispatch(startRemoveSetting(id)),
   startToggleSpecial: ({ special, id }) => dispatch(startToggleSpecial({ special, id })),
   startToggleRules: ({ rules, id }) => dispatch(startToggleRules({ rules, id })),
-  startAddSearch: ({ search, id }) => dispatch(startAddSearch({ search, id }))
+  startAddSearch: ({ search, id }) => dispatch(startAddSearch({ search, id })),
+  startRemoveSearch: ({ searchId, id }) => dispatch(startRemoveSearch({ searchId, id })),
+  startClearSearch: ({ id }) => dispatch(startClearSearch({ id }))
 })
 
 export default connect(null, mapDispatchToProps)(Tracker);
