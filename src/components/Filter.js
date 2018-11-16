@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+
 class Filter extends React.Component {
   state = {
     value: ''
@@ -11,16 +13,24 @@ class Filter extends React.Component {
   }
 
   render(){
-  return (
-  <div>
-    <input
-      type="text"
-      value={this.state.value}
-      onChange={this.handleChange}
-    />
-  </div>
-);
+  let content = this.props.items > 0 ? (
+      <div
+        className="trackerFilter"
+        >
+        <input
+          type="text"
+          placeholder="search..."
+          value={this.state.value}
+          onChange={this.handleChange}
+        />
+      </div>
+    ) : <div></div>
+    return content;
   }
 }
 
-module.exports = Filter;
+const mapStateToProps = (state,props) => ({
+  items: state.settings.length
+});
+
+module.exports = connect(mapStateToProps, null)(Filter);

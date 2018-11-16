@@ -11,11 +11,11 @@ export class DashboardPage extends React.Component {
   onFilter = ({ value }) => {
     if(value != ""){
       this.props.settings.forEach(data => {
-        let id = data.id;
-        if(!data.department.includes(value)){
-          document.getElementById(id).style["display"] = "none";
+        let department = data.department.toLowerCase();
+        if(!department.includes(value.toLowerCase())){
+          document.getElementById(data.id).style["display"] = "none";
         } else {
-          document.getElementById(id).style["display"] = "block";
+          document.getElementById(data.id).style["display"] = "block";
         }
       })
     } else {
