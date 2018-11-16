@@ -19,6 +19,11 @@ import Toggle from "./Toggle";
 
 export class Tracker extends React.Component {
   constructor(props){
+    let search = [];
+    for (var x in props.search){
+      search.push({ id: x, value: props.search[x], label: props.search[x] })
+      //search.push({ value: props.search[x], label: props.vals[x]})
+    }
     super(props);
     this.state = {
       info: false,
@@ -26,13 +31,16 @@ export class Tracker extends React.Component {
       rules: this.props.rules,
       description: false,
       showModal: false,
-      search: this.props.search
+      search
     }
 
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
+  componentDidMount(props){
+    console.log("Tracker props", this.props)
+  }
   onShowDescription = () => {
     this.setState((prevState) => ({ description: !prevState.description }));
   }
@@ -59,6 +67,7 @@ export class Tracker extends React.Component {
 
   onRemoveSearch = ({ searchId }) => {
     this.props.startRemoveSearch({ searchId, id: this.props.id });
+    this.setState(prevState => ({ search: this.props.search }))
   }
 
   onClearSearch = () => {
@@ -100,7 +109,7 @@ export class Tracker extends React.Component {
         />
         <Search
           id={this.props.id}
-          vals={this.state.search}
+          search={this.state.search}
           title="Filter"
           tooltipContent="Search for phrases here to further narrow the results."
           onSearch={this.onSearch}

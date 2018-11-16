@@ -16,21 +16,19 @@ const createOption = (label: string) => ({
 });
 
 class Search extends React.Component {
-  constructor(props){
-    super(props);
-    let options = [];
-     for (var x in this.props.vals){
-       options.push({ value: props.vals[x], label: props.vals[x], searchId: x });
-    };
-    this.state = {
+  state = {
       inputValue: '',
-      value: options
-    };
+      value: this.props.search
+  };
+
+  componentDidMount(){
+    console.log("Search props", this.props)
   }
 
-  handleChange = (value: any, actionMeta: any) => {
+  handleDeletion = (value: any, actionMeta: any) => {
     if(actionMeta.action == "remove-value"){
-      this.props.onRemoveSearch({ searchId: actionMeta.removedValue.searchId })
+      this.props.onRemoveSearch({ searchId: actionMeta.removedValue.id })
+
     } else if (actionMeta.action == "clear"){
       this.props.onClearSearch();
     }
@@ -81,7 +79,7 @@ class Search extends React.Component {
                 inputValue={inputValue}
                 isMulti
                 menuIsOpen={false}
-                onChange={this.handleChange}
+                onChange={this.handleDeletion}
                 onInputChange={this.handleInputChange}
                 onKeyDown={this.handleKeyDown}
                 placeholder="Add filters here..."
@@ -93,4 +91,13 @@ class Search extends React.Component {
   }
 }
 
-module.exports = Search;
+const mapStateToProps = (state,props) => ({
+  settings: state.settings
+})
+
+
+module.exports = connect(mapStateToProps, null)(Search);
+
+
+
+
