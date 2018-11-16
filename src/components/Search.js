@@ -1,5 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
 import { startAddSearch } from "../actions/settings";
 import Tooltip from "react-tooltip-lite";
 import Toggle from "./Toggle";
@@ -10,58 +9,39 @@ const components = {
   DropdownIndicator: null,
 };
 
-const createOption = (label: string) => ({
-  label,
-  value: label,
-});
-
 class Search extends React.Component {
   state = {
       inputValue: '',
-      value: this.props.search
-  };
-
-  componentDidMount(){
-    console.log("Search props", this.props)
-  }
-
-  handleDeletion = (value: any, actionMeta: any) => {
-    if(actionMeta.action == "remove-value"){
-      this.props.onRemoveSearch({ searchId: actionMeta.removedValue.id })
-
-    } else if (actionMeta.action == "clear"){
-      this.props.onClearSearch();
-    }
   };
 
   handleInputChange = (inputValue: string) => {
     this.setState({ inputValue });
   };
 
-  handleSearch = ({ value, inputValue }) => {
-    this.setState({
-      inputValue: '',
-      value: [...value, createOption(inputValue)], // Eventually like to take this out...
-    });
-    this.props.onSearch({ inputValue });
-  }
+  handleDeletion = (items) => {
+    // items is an array of items that should not be deleted...
+    let filtered = this.props.search.filter((tag) => !items.includes(tag));
+    if(filtered.length == 1){
+      this.props.handleRemoveSearch({ searchId: filtered[0].id })
+    } else {
+      this.props.handleClearSearch();
+    }
+  };
 
   handleKeyDown = (event: SyntheticKeyboardEvent<HTMLElement>) => {
-    const { inputValue, value } = this.state;
+    const { inputValue } = this.state;
     if (!inputValue) return;
     switch (event.key) {
       case 'Enter':
       case 'Tab':
-        this.handleSearch({
-          value,
-          inputValue
-        });
+        this.props.handleAddSearch({ inputValue });
+        this.setState({ inputValue: "" });
         event.preventDefault();
     }
   };
 
   render() {
-    const { inputValue, value } = this.state;
+    const { inputValue } = this.state;
     return (
         <div className="search">
             <div className="search__title">Search</div>
@@ -83,7 +63,7 @@ class Search extends React.Component {
                 onInputChange={this.handleInputChange}
                 onKeyDown={this.handleKeyDown}
                 placeholder="Add filters here..."
-                value={value}
+                value={this.props.search} // List of terms...
               />
             </Tooltip>
         </div>
@@ -91,12 +71,7 @@ class Search extends React.Component {
   }
 }
 
-const mapStateToProps = (state,props) => ({
-  settings: state.settings
-})
-
-
-module.exports = connect(mapStateToProps, null)(Search);
+module.exports = Search;
 
 
 

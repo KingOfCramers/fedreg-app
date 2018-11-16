@@ -12,7 +12,11 @@ export class DashboardPage extends React.Component {
       <div className="content-container">
         <Selector className="selector"/>
           {this.props.settings.map((data) => {
-            return <Tracker key={data.department} {...data}/>
+            let search = [];
+            for (var x in data.search){
+              search.push({ id: x, value: data.search[x], label: data.search[x] })
+            };
+            return <Tracker key={data.department} {...data} search={[...search]}/>
           })}
         <Clear />
       </div>

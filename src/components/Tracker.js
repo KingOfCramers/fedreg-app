@@ -19,11 +19,6 @@ import Toggle from "./Toggle";
 
 export class Tracker extends React.Component {
   constructor(props){
-    let search = [];
-    for (var x in props.search){
-      search.push({ id: x, value: props.search[x], label: props.search[x] })
-      //search.push({ value: props.search[x], label: props.vals[x]})
-    }
     super(props);
     this.state = {
       info: false,
@@ -31,16 +26,13 @@ export class Tracker extends React.Component {
       rules: this.props.rules,
       description: false,
       showModal: false,
-      search
+      search: this.props.search
     }
 
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
-  componentDidMount(props){
-    console.log("Tracker props", this.props)
-  }
   onShowDescription = () => {
     this.setState((prevState) => ({ description: !prevState.description }));
   }
@@ -61,25 +53,30 @@ export class Tracker extends React.Component {
     this.props.startToggleRules({ rules: bool, id: this.props.id })
   }
 
-  onSearch = ({ inputValue }) => {
-    this.props.startAddSearch({ search: inputValue, id: this.props.id })
-  }
-
-  onRemoveSearch = ({ searchId }) => {
-    this.props.startRemoveSearch({ searchId, id: this.props.id });
-    this.setState(prevState => ({ search: this.props.search }))
-  }
-
-  onClearSearch = () => {
-    this.props.startClearSearch({ id: this.props.id });
-  }
-
   handleOpenModal() {
     this.setState({ showModal: true });
   }
 
   handleCloseModal () {
     this.setState({ showModal: false });
+  }
+
+
+  // SEARCH FUNCTIONALITY //
+
+
+  onAddSearch = ({ inputValue }) => {
+    this.props.startAddSearch({ search: inputValue, id: this.props.id })
+  }
+
+  onRemoveSearch = ({ searchId }) => {
+    console.log(searchId)
+    this.props.startRemoveSearch({ searchId, id: this.props.id });
+    this.setState(prevState => ({ search: this.props.search }))
+  }
+
+  onClearSearch = () => {
+    this.props.startClearSearch({ id: this.props.id });
   }
 
 
@@ -108,13 +105,13 @@ export class Tracker extends React.Component {
           toggleFunc={this.onSpecial}
         />
         <Search
-          id={this.props.id}
-          search={this.state.search}
+          id={this.props.id} // id of tracker...
+          search={this.props.search} // list of search terms ...
           title="Filter"
           tooltipContent="Search for phrases here to further narrow the results."
-          onSearch={this.onSearch}
-          onRemoveSearch={this.onRemoveSearch}
-          onClearSearch={this.onClearSearch}
+          handleClearSearch={this.onClearSearch}
+          handleRemoveSearch={this.onRemoveSearch}
+          handleAddSearch={this.onAddSearch}
         />
       </div>
       <div className={`${this.state.description ? "showing" : "collapsed"}`}>

@@ -155,15 +155,17 @@ export const startRemoveSearch = ({ search, id, searchId }) => {
 };
 
 
-export const clearSearch = () => ({
-  type: "CLEAR_Search"
+export const clearSearch = ({ id }) => ({
+  type: "CLEAR_SEARCH",
+  id
 });
 
 export const startClearSearch = ({ id }) => {
+  console.log("CLEAR", id)
   return (dispatch, getState) => {
     const uid = getState().auth.uid;
     return database.ref(`${uid}/${id}/search`).remove()
-      .then(() => dispatch(clearSearch()));
+      .then(() => dispatch(clearSearch({ id })));
   };
 };
 
