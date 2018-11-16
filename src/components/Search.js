@@ -34,8 +34,11 @@ class Search extends React.Component {
     switch (event.key) {
       case 'Enter':
       case 'Tab':
-        this.props.handleAddSearch({ inputValue });
-        this.setState({ inputValue: "" });
+        let vals = this.props.search.map(item => item.value);
+        if(!vals.includes(inputValue)){
+          this.props.handleAddSearch({ inputValue });
+          this.setState({ inputValue: "" });
+        };
         event.preventDefault();
     }
   };
