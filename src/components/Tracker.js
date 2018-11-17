@@ -14,7 +14,7 @@ import {
   startRemoveSearch,
   startClearSearch
 } from "../actions/settings";
-import Search from "./Search";
+import Tags from "./Tags";
 import Toggle from "./Toggle";
 
 export class Tracker extends React.Component {
@@ -104,7 +104,7 @@ export class Tracker extends React.Component {
           tooltipContent="Enable 'Special Collection' to recieve PDFs filed throughout the day. By disabling this feature, you will still recieve a zip file of regular filings at 9:00 a.m. EST."
           toggleFunc={this.onSpecial}
         />
-        <Search
+        <Tags
           id={this.props.id} // id of tracker...
           search={this.props.search} // list of search terms ...
           title="Filter"

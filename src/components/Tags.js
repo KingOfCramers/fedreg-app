@@ -9,7 +9,7 @@ const components = {
   DropdownIndicator: null,
 };
 
-class Search extends React.Component {
+class Tags extends React.Component {
   state = {
       inputValue: '',
   };
@@ -74,7 +74,7 @@ class Search extends React.Component {
   }
 }
 
-module.exports = Search;
+module.exports = Tags;
 
 
 
