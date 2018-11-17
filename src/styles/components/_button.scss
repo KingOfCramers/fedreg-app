@@ -2,7 +2,7 @@
   background: darken($blue, 20%);
   border: none;
   color: white;
-  padding: $s-size;
+  padding: $xs-size;
   font-weight: 300;
   font-size: $small-font-size;
   display: inline-block; // Takes into effect top and bottom margin and padding
@@ -72,9 +72,16 @@ button:focus {
   @extend .button;
   margin-top: $s-size;
   margin-bottom: $s-size;
+  flex-flow: row;
 
   background: $red;
   &:hover {
     background: darken($red, 5%);
   }
+}
+
+.button--fetch {
+  @extend .button;
+  padding: $xs-size;
+  margin-top: $xs-size;
 }

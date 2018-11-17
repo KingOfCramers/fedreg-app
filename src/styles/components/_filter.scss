@@ -1,9 +1,10 @@
-.trackerFilter {
-  margin: $xs-size;
+.filter {
   margin-left: 0;
+  margin: $xxs-size 0 $xxs-size 0;
+  display: inline-flex;
 }
 
-.trackerFilter input {
+.filter input {
   font-family: inherit;
   padding: $xs-size;
 }

@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import Selector from "./Selector";
 import Clear from "./Clear";
 import Filter from "./Filter";
+import Fetch from "./Fetch";
 
 export class DashboardPage extends React.Component {
 
@@ -23,18 +24,23 @@ export class DashboardPage extends React.Component {
     };
   }
 
+  onFetch = () => {
+    console.log(this.props.settings)
+  }
+
   render(){
     return (
       <div className="content-container">
-        <Selector className="selector" />
-        <Filter handleFilter={this.onFilter} />
-          {this.props.settings.map((data) => {
-            let search = [];
-            for (var x in data.search){
-              search.push({ id: x, value: data.search[x], label: data.search[x] })
-            };
-            return <Tracker className="tracker" cssId={data.id} key={data.department} {...data} search={[...search]}/>
-          })}
+          <Selector className="selector" />
+          <Filter handleFilter={this.onFilter} />
+          <Fetch fetch={this.onFetch}/>
+            {this.props.settings.map((data) => {
+              let search = [];
+              for (var x in data.search){
+                search.push({ id: x, value: data.search[x], label: data.search[x] })
+              };
+              return <Tracker className="tracker" cssId={data.id} key={data.department} {...data} search={[...search]}/>
+            })}
         <Clear />
       </div>
     )

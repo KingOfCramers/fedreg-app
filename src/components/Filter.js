@@ -15,7 +15,7 @@ class Filter extends React.Component {
   render(){
   let content = this.props.items > 0 ? (
       <div
-        className="trackerFilter"
+        className="filter"
         >
         <input
           type="text"

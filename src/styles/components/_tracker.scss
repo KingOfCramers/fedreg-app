@@ -1,8 +1,8 @@
 .tracker {
   border: 1px solid darken($off-white, 10%);
-  border-top: none;
+  border-bottom: none;
   color: $dark-grey;
-  padding: $s-size;
+  padding: $xs-size;
   text-decoration: none;
   background: white;
 
@@ -14,8 +14,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: $m-size;
+    padding: $s-size;
     align-items: center;
+  }
+
+  a {
+    color: black;
+    &:hover {
+      color: $blue;
+    }
   }
 }
 
@@ -23,18 +30,6 @@
   text-align: center;
   margin-top: $l-size;
   font-style: italic;
-}
-
-.tracker:first-of-type {
-  margin-top: $s-size;
-  border-top: 1px solid darken($off-white, 10%);
-}
-
-.tracker a {
-  color: black;
-  &:hover {
-    color: $blue;
-  }
 }
 
 .tracker__title {
