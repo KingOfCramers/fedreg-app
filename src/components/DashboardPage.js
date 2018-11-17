@@ -10,7 +10,10 @@ import Fetch from "./Fetch";
 export class DashboardPage extends React.Component {
 
   onFilter = ({ value }) => {
+    console.log(value)
     if(value != ""){
+      document.getElementById("clear").style["display"] = "none";
+      document.getElementById("fetch").style["display"] = "none";
       this.props.settings.forEach(data => {
         let department = data.department.toLowerCase();
         if(!department.includes(value.toLowerCase())){
@@ -20,6 +23,8 @@ export class DashboardPage extends React.Component {
         }
       })
     } else {
+      document.getElementById("clear").style["display"] = "inline-block";
+      document.getElementById("fetch").style["display"] = "inline-block";
       this.props.settings.forEach(data => document.getElementById(data.id).style["display"] = "block")
     };
   }
@@ -33,7 +38,6 @@ export class DashboardPage extends React.Component {
       <div className="content-container">
           <Selector className="selector" />
           <Filter handleFilter={this.onFilter} />
-          <Fetch fetch={this.onFetch}/>
             {this.props.settings.map((data) => {
               let search = [];
               for (var x in data.search){
@@ -42,6 +46,7 @@ export class DashboardPage extends React.Component {
               return <Tracker className="tracker" cssId={data.id} key={data.department} {...data} search={[...search]}/>
             })}
             <Clear />
+            <Fetch fetch={this.onFetch}/>
       </div>
     )
   }
