@@ -70,10 +70,7 @@ button:focus {
 
 .button--clear {
   @extend .button;
-  margin-top: $s-size;
-  margin-bottom: $s-size;
-  flex-flow: row;
-
+  // margin-top: $xs-size;
   background: $red;
   &:hover {
     background: darken($red, 5%);
@@ -84,4 +81,6 @@ button:focus {
   @extend .button;
   padding: $xs-size;
   margin-top: $xs-size;
+  background: $green;
+  color: white;
 }

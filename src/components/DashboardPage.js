@@ -41,7 +41,7 @@ export class DashboardPage extends React.Component {
               };
               return <Tracker className="tracker" cssId={data.id} key={data.department} {...data} search={[...search]}/>
             })}
-        <Clear />
+            <Clear />
       </div>
     )
   }

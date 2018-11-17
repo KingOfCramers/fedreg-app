@@ -29,7 +29,7 @@ export class Clear extends React.Component {
 
 render(){
   return (
-    <div>
+    <div className="clear">
         { this.props.settings.length > 0 ?
           <button
             className="button--clear" onClick={this.handleOpenModal}

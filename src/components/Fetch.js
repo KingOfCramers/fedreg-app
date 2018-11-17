@@ -1,16 +1,25 @@
 import React from "react";
+import { connect } from "react-redux";
 
 export class Fetch extends React.Component {
   render(){
     return (
-      <div className="fetch">
-        <button
-          className="button--fetch"
-          onClick={this.props.fetch}
-        >Fetch</button>
-      </div>
+      this.props.settings.length > 0 ? (
+        <div className="fetch">
+          <button
+            className="button--fetch"
+            onClick={this.props.fetch}
+          >Fetch</button>
+        </div>
+      ) : (
+        <div></div>
+      )
     )
   }
 }
 
-module.exports = Fetch;
+const mapStateToProps = (state,props) => ({
+  settings: state.settings
+})
+
+module.exports = connect(mapStateToProps, null)(Fetch);
