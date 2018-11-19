@@ -12,8 +12,6 @@ export class DashboardPage extends React.Component {
   onFilter = ({ value }) => {
     console.log(value)
     if(value != ""){
-      document.getElementById("clear").style["display"] = "none";
-      document.getElementById("fetch").style["display"] = "none";
       this.props.settings.forEach(data => {
         let department = data.department.toLowerCase();
         if(!department.includes(value.toLowerCase())){
@@ -23,8 +21,6 @@ export class DashboardPage extends React.Component {
         }
       })
     } else {
-      document.getElementById("clear").style["display"] = "inline-block";
-      document.getElementById("fetch").style["display"] = "inline-block";
       this.props.settings.forEach(data => document.getElementById(data.id).style["display"] = "block")
     };
   }

@@ -8,6 +8,14 @@ class Filter extends React.Component {
 
   handleChange = (e) => {
     let value = e.target.value;
+    if(value){
+      document.getElementById("clear").style["display"] = "none";
+      document.getElementById("fetch").style["display"] = "none";
+
+    } else {
+      document.getElementById("clear").style["display"] = "inline-block";
+      document.getElementById("fetch").style["display"] = "inline-block";
+    }
     this.setState({ value });
     this.props.handleFilter({ value });
   }
@@ -18,8 +26,9 @@ class Filter extends React.Component {
         className="filter"
         >
         <input
+          id="search-input"
           type="text"
-          placeholder="search..."
+          placeholder="Search..."
           value={this.state.value}
           onChange={this.handleChange}
         />
