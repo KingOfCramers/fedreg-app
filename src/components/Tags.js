@@ -34,6 +34,7 @@ class Tags extends React.Component {
     switch (event.key) {
       case 'Enter':
       case 'Tab':
+      case " ":
         let vals = this.props.search.map(item => item.value);
         if(!vals.includes(inputValue)){
           this.props.handleAddSearch({ inputValue });

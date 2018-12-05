@@ -107,8 +107,8 @@ export class Tracker extends React.Component {
         <Tags
           id={this.props.id} // id of tracker...
           search={this.props.search} // list of search terms ...
-          title="Filter"
-          tooltipContent="Filter out documents with unwanted search terms."
+          title="Search"
+          tooltipContent="Only return documents with specified filter terms. Leaving this blank will return all documents."
           handleClearSearch={this.onClearSearch}
           handleRemoveSearch={this.onRemoveSearch}
           handleAddSearch={this.onAddSearch}

@@ -161,7 +161,6 @@ export const clearSearch = ({ id }) => ({
 });
 
 export const startClearSearch = ({ id }) => {
-  console.log("CLEAR", id)
   return (dispatch, getState) => {
     const uid = getState().auth.uid;
     return database.ref(`${uid}/${id}/search`).remove()
