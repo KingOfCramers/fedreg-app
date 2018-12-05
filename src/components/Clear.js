@@ -29,11 +29,12 @@ export class Clear extends React.Component {
 
 render(){
   return (
-    <div className="clear" id="clear">
+    <div>
         { this.props.settings.length > 0 ?
+          <div className="clear" id="clear">
           <button
             className="button--clear" onClick={this.handleOpenModal}
-          >Clear</button>
+          >Clear</button></div>
           : <div className="box-layout--started"><p className="prompt">Add trackers to get started</p></div>
         }
         <Modal isOpen={this.state.showModal}>

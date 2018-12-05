@@ -10,11 +10,11 @@ class Filter extends React.Component {
     let value = e.target.value;
     if(value){
       document.getElementById("clear").style["display"] = "none";
-      document.getElementById("fetch").style["display"] = "none";
+      // document.getElementById("fetch").style["display"] = "none";
 
     } else {
       document.getElementById("clear").style["display"] = "inline-block";
-      document.getElementById("fetch").style["display"] = "inline-block";
+     // document.getElementById("fetch").style["display"] = "inline-block";
     }
     this.setState({ value });
     this.props.handleFilter({ value });

@@ -26,9 +26,9 @@ class Selector extends React.Component {
   render() {
     const customStyles = {
       control: (styles, { isDisabled }) => ({ ...styles, backgroundColor: 'white' }),
-      option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+      /* option: (styles, { data, isDisabled, isFocused, isSelected }) => {
         return data.label == "Add Group" ? { ...styles, color: isFocused ? "white" : "#333333", backgroundColor: isDisabled ? null : isFocused ? "rgba(123,104,72,.6)" : "white", marginBottom: "2px", marginTop: "5px", textAlign: "center"  } : { ...styles };
-      }
+      } */
     };
     const { selectedOption } = this.state;
     return (

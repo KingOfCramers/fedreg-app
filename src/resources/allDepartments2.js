@@ -1,10 +1,5 @@
 const allDepartments = [
     {
-        "value": "Add Group",
-        "label": "Add Group",
-        "group": true
-    },
-    {
         "agency_url": "http://www.acus.gov/",
         "child_ids": [],
         "child_slugs": [],

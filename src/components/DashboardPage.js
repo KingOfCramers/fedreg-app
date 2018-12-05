@@ -33,6 +33,7 @@ export class DashboardPage extends React.Component {
     return (
       <div className="content-container">
           <Selector className="selector" />
+          <Clear />
           <Filter handleFilter={this.onFilter} />
             {this.props.settings.map((data) => {
               let search = [];
@@ -41,8 +42,7 @@ export class DashboardPage extends React.Component {
               };
               return <Tracker className="tracker" cssId={data.id} key={data.department} {...data} search={[...search]}/>
             })}
-            <Clear />
-            <Fetch fetch={this.onFetch}/>
+            {/* <Fetch fetch={this.onFetch}/> */}
       </div>
     )
   }
